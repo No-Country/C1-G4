@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+:root{
+  /* Color definition */
+  --bg-color: #ffffff;
+  --success-color: #51AFF2;
+  --primary-color: #044392;
+  --dark-font-color: #111111;
+  --light-font-color: #807D78;
+  --shadow: 0px 8px 20px 0px rgba(4,67,146,0.17);
+
+  /* Fonts styles */
+  --font-family: 'Roboto', sans-serif;
+  --base-font-size: 16px;
+  --h1-font-size: 54px;
+  --h2-font-size: 36px;
+  --h3-font-size: 24px;
+  --h5-font-size: 10.67px;
+  --h6-font-size: 7.11px;
+
+  /* Space definition */
+  --gap: 15px;
+  --line-height: 1.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Reset styles */
+
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/*** https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/ ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* Default styles configuration */
+
+*{
+  font-family: var(--font-family);
+}
+
+h1{
+  font-size: var(--h1-font-size);
+  font-weight: bold;
+}
+
+h2{
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+}
+
+h3{
+  font-size: var(--h3-font-size);
+  font-weight: bold;
+}
+
+h4, p{
+  font-size: var(--base-font-size);
+  font-weight: bold;
+}
+
+h5{
+  font-size: var(--h5-font-size);
+  font-weight: bold;
+}
+
+h6{
+  font-size: var(--h6-font-size);
+  font-weight: bold;
 }
