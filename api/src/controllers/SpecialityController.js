@@ -7,7 +7,7 @@ export default {
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
-        message: "Eror ar intentar agregar especialidad",
+        message: "Eror al intentar agregar especialidad",
       });
       next(e);
     }
@@ -18,7 +18,7 @@ export default {
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
-        message: "Eror ar intentar listar las especialidades",
+        message: "Eror al intentar listar las especialidades",
       });
       next(e);
     }
@@ -32,7 +32,20 @@ export default {
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
-        message: "Eror ar intentar actualizar especialidad",
+        message: "Eror al intentar actualizar especialidad",
+      });
+      next(e);
+    }
+  },
+  remove: async (req, res, next) => {
+    try {
+      const reg = await models.Speciality.findByIdAndDelete({
+        _id: req.body._id
+      });
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Eror al intentar eliminar especialidad",
       });
       next(e);
     }
@@ -46,7 +59,7 @@ export default {
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
-        message: "Eror ar intentar activar especialidad",
+        message: "Eror al intentar activar especialidad",
       });
       next(e);
     }
@@ -60,7 +73,7 @@ export default {
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
-        message: "Eror ar intentar desactivar especialidad",
+        message: "Eror al intentar desactivar especialidad",
       });
       next(e);
     }

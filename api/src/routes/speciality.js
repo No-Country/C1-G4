@@ -7,4 +7,12 @@ router.post("/add", spcecialityController.add);
 
 router.get("/list", spcecialityController.list);
 
+router.put("/update", spcecialityController.update);
+
+router.delete("/remove", spcecialityController.remove);
+
+router.put("/activate", spcecialityController.activate);
+
+router.put("/deactivate", spcecialityController.deactivate);
+
 export default router;
