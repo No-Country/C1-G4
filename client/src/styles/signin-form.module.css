@@ -1,0 +1,95 @@
+/* General */
+.container{
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.formContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 300px;
+}
+
+.form{
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    padding: 15px 20px;
+    margin-top: 40px;
+    border-radius: 4px;
+}
+
+/* form parts */
+
+.formImg{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url('./../assets/sign-in-form-image.jpg') center no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+
+    display: none;
+}
+
+.formTitle{
+    font-size: var(--h3-font-size);
+    margin-bottom: 5px;
+}
+
+.formSubtitle{
+    font-size: var(--h4-font-size);
+    color: var(--light-font-color);
+}
+
+.formControls{
+    margin-top: 40px;
+}
+
+.formSubmitBtn{
+    background-color: var(--primary-color);
+    padding: 7px 25px;
+    color: var(--bg-color);
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+
+/* Form parts: state changes */
+
+.formSubmitBtn:hover{
+    cursor: pointer;
+}
+
+.formSubmitBtn:active{
+    transform: scale(0.9);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 500px){
+    .formContainer{
+        max-width: 330px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .form{
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 30px 40px;
+    }
+
+    .formImg{
+        display: block;
+    }
+
+    .formContainer{
+        grid-template-columns: 45% 55%;
+        max-width: 700px;
+    }
+}
