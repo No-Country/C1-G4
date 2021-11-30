@@ -14,7 +14,9 @@ export default {
   },
   list: async (req, res, next) => {
     try {
-      const reg = await models.Medic.find();
+      const reg = await models.Medic.find()
+        .populate("speciality", { name: 1 }) 
+        .sort({ created_at: -1 });
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

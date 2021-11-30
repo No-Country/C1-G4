@@ -9,4 +9,12 @@ router.get("/query", medicController.query);
 
 router.get("/list", medicController.list);
 
+router.put("/update", medicController.update);
+
+router.delete("/remove", medicController.remove);
+
+router.put("/activate", medicController.activate);
+
+router.put("/deactivate", medicController.deactivate);
+
 export default router;
