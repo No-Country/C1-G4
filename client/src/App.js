@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer.js";
 
 import Home from "./pages/Home";
 import Signin from "./pages/Signin";

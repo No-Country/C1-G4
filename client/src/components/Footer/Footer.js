@@ -1,20 +1,16 @@
 import React, { Fragment } from "react";
-
-const estilo = {
-  display: "flex",
-  justifyContent: "space-evenly",
-  paddingTop: "30px",
-};
+import styles from "../../styles/Footer.css";
+import logo from "../../images/logo.jpg";
 
 function Footer() {
   return (
     <Fragment>
       <div>
         <footer>
-          <div style={estilo}>
-            <div classname="flex-child-ft item1">
+          <div style={styles}>
+            <div classname="divcontacto">
               <a href="index-2.html">
-                <img classname="logo" src="images/logo.jpg" alt="" />
+                <img classname="logo" src={logo} alt="" />
               </a>
               <p>
                 Avenida Calle 1500 <br />
@@ -22,6 +18,7 @@ function Footer() {
               </p>
               <p>Contactanos: 202 342 6789</p>
             </div>
+            <hr />
             <div className="divs">
               <h4>Links</h4>
               <ul>
@@ -54,27 +51,13 @@ function Footer() {
               </ul>
             </div>
             <div className="divs">
-              <h4>Usuario</h4>
-              <ul>
-                <li>
-                  <a href="# ">Mi cuenta</a>
-                </li>
-                <li>
-                  <a href="# ">Mi cuenta</a>
-                </li>
-                <li>
-                  <a href="# ">Mi cuenta</a>
-                </li>
-              </ul>
-            </div>
-            <div className="divs">
               <h4>Newsletter</h4>
               <form action="#">
                 <input type="text" placeholder=" tu email..." />
               </form>
 
               <a href="# " classname="btn">
-                Subscribete <i classname="ion-ios-arrow-forward"></i>
+                <h5>Suscribete</h5>
               </a>
             </div>
           </div>
