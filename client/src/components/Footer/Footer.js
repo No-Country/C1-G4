@@ -14,7 +14,7 @@ function Footer() {
           <div style={estilo}>
             <div classname="flex-child-ft item1">
               <a href="index-2.html">
-                <img classname="logo" src="images/logo1.png" alt="" />
+                <img classname="logo" src="images/logo.jpg" alt="" />
               </a>
               <p>
                 Avenida Calle 1500 <br />
