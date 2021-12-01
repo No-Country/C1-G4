@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styles from "../../styles/Footer.css";
+import styles from "../../styles/Footer.module.css";
 import logo from "../../images/logo.jpg";
 
 function Footer() {
@@ -8,16 +8,7 @@ function Footer() {
       <div>
         <footer>
           <div className="divfooter" style={styles}>
-            <div id="divcontacto">
-              <img id="logo" src={logo} alt="" />
-              <p>
-                Avenida Calle 1500 <br />
-                Ciudad de BA, CP 1400
-              </p>
-              <p>Contactanos: 202 342 6789</p>
-            </div>
-            <hr />
-            <div className="divs">
+            <div className={styles.divs}>
               <h4>Links</h4>
               <ul>
                 <li>
@@ -34,7 +25,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="divs">
+            <div className={styles.divs}>
               <h4>Legal</h4>
               <ul>
                 <li>
@@ -48,12 +39,21 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="divs">
+            <div className={styles.divs}>
               <h4>Newsletter</h4>
               <form action="#">
                 <input type="text" placeholder=" Ingresa tu email..." />
               </form>
             </div>
+          </div>
+          <hr />
+          <div className={styles.divcontacto}>
+            <img className={styles.logo} src={logo} alt="" />
+            <p>
+              Avenida Calle 1500 <br />
+              Ciudad de BA, CP 1500
+            </p>
+            <p>Contactanos: 111 222 6789</p>
           </div>
         </footer>
       </div>

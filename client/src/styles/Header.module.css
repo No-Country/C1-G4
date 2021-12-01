@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*.hamburg {
+  height: 24px;
+  width: 24px;
+  background-color: rgb(32, 34, 34);
+  border-style: solid;
+  border-color: rgb(252, 249, 248);
+  border-width: 1px;
+}*/
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(32, 34, 34);
+  height: 100px;
+}
+.logo {
+  height: 54px;
+  width: 55px;
+  border-radius: 40px;
+}
+
+.ulestilo {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  text-align: center;
+}
+.ulestilo li {
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+}
