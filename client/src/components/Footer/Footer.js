@@ -7,11 +7,9 @@ function Footer() {
     <Fragment>
       <div>
         <footer>
-          <div style={styles}>
-            <div classname="divcontacto">
-              <a href="index-2.html">
-                <img classname="logo" src={logo} alt="" />
-              </a>
+          <div className="divfooter" style={styles}>
+            <div id="divcontacto">
+              <img id="logo" src={logo} alt="" />
               <p>
                 Avenida Calle 1500 <br />
                 Ciudad de BA, CP 1400
@@ -23,7 +21,7 @@ function Footer() {
               <h4>Links</h4>
               <ul>
                 <li>
-                  <a href="# ">Nosotros</a>
+                  <a href="https://www.google.com.ar">Nosotros</a>
                 </li>
                 <li>
                   <a href="# ">Preguntas frecuentes</a>
@@ -53,12 +51,8 @@ function Footer() {
             <div className="divs">
               <h4>Newsletter</h4>
               <form action="#">
-                <input type="text" placeholder=" tu email..." />
+                <input type="text" placeholder=" Ingresa tu email..." />
               </form>
-
-              <a href="# " classname="btn">
-                <h5>Suscribete</h5>
-              </a>
             </div>
           </div>
         </footer>
