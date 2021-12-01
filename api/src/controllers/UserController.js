@@ -7,7 +7,7 @@ export default {
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({
-                message: "Eror ar intentar agregar especialidad",
+                message: "Error al intentar agregar el Usuario",
             });
             next(e);
         }
@@ -18,7 +18,7 @@ export default {
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({
-                message: "Eror ar intentar listar las especialidades",
+                message: "Error al intentar listar los Usuarios",
             });
             next(e);
         }
