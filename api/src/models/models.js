@@ -1,9 +1,9 @@
+import Medic from "./medic";
 import Speciality from "./speciality";
 import User from "./user";
-import Medic from "./medic";
 
 export default {
+  Medic,
   Speciality,
-  User,
-  Medic
+  User
 }
