@@ -1,4 +1,5 @@
 import models from "../models/models";
+import bcrypt from "bcryptjs"
 
 export default {
     add: async (req, res, next) => {
@@ -27,7 +28,13 @@ export default {
         try {
             const reg = await models.User.findByIdAndUpdate(
                 { _id: req.body._id },
-                { name: req.body.name }
+                { username: req.body.username },
+                { name: req.body.name },
+                { lastname: req.body.lastname },
+                { email: req.body.email },
+                { password: req.body.password },
+                { rol: req.body.rol },
+                { created_at: req.body.created_at },
             );
             res.status(200).json(reg);
         } catch (e) {
@@ -41,12 +48,12 @@ export default {
         try {
             const reg = await models.User.findByIdAndUpdate(
                 { _id: req.body._id },
-                { state: 1 }
+                { status: 1 }
             );
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({
-                message: "Error al intentar activar usuario",
+                message: "Error al intentar cargar administrador",
             });
             next(e);
         }
@@ -55,15 +62,40 @@ export default {
         try {
             const reg = await models.User.findByIdAndUpdate(
                 { _id: req.body._id },
-                { state: 0 }
+                { status: 0 }
             );
             res.status(200).json(reg);
         } catch (e) {
             res.status(500).send({
-                message: "Error al intentar desactivar usuario",
+                message: "Error al cargar administrador",
             });
             next(e);
         }
+    },
 
+    login: async (req, res, next) => {
+            try{
+                let user = await models.User.findOne({ email: req.body.email, status: 1 })
+                if (user) {
+                    let match = await bcrypt.compare(req.body.password, user.password)
+                    if (match) {
+                        let tokenReturn = await token.encode(user._id, user.rol, user.email)
+                        res.status(200).json({ user, tokenReturn })
+                    } else {
+                        res.status(404).send({
+                            message: 'Password incorrecto'
+                        })
+                    }
+                } else {
+                    res.status(404).send({
+                        message: 'No existe el usuario'
+                    })
+                }
+        } catch(e){
+            res.status(500).send({
+                message: "Error al cargar Usuario",
+            });
+            next(e);
+        }
     }
-};
+}
