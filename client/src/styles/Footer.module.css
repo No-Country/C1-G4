@@ -5,13 +5,6 @@ h4 {
   color: hsl(192, 68%, 35%);
 }
 
-li a {
-  font-size: 0.8em;
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-
 hr {
   background-color: white;
   width: 100%;
@@ -27,12 +20,25 @@ footer {
 
 .divs {
   padding-top: 8px;
+  margin-left: 15px;
 }
 
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.divs ul li a {
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 0.8em;
+}
 .logo {
   height: 50px;
   width: 52px;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 .divcontacto {
   display: flex;
@@ -41,9 +47,15 @@ footer {
   align-items: center;
 }
 
-form {
+form input {
   color: rgb(71, 69, 69);
+  height: 20px;
+  width: 200px;
   font-size: 12px;
   border-radius: 15px;
   margin-top: 2px;
+  outline: none;
+  border-radius: 5px;
+  color: hsl(195, 3%, 31%);
+  border: 1px solid hsl(192, 68%, 35%);
 }
