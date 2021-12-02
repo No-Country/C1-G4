@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styles from "../../styles/Footer.module.css";
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo4.jpg";
 
 function Footer() {
   return (
