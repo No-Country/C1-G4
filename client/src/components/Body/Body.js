@@ -4,9 +4,9 @@ import styles from "../../styles/Body.module.css";
 function Body() {
   return (
     <Fragment>
-      <body className="body" style={styles}>
+      <div className={ styles.body }>
         {/* user = {user} */}
-      </body>
+      </div>
     </Fragment>
   );
 }
