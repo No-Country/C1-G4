@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dfe2df;
+  font-family: "open sans";
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tabla {
+  width: 120px;
+  height: 130px;
+  margin: auto;
+  border: 2px solid rgb(128, 185, 178);
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px 2px #1d1e25;
+  padding: 5px;
+  text-align: center;
+  flex-grow: 1;
+  color: #343759;
+}
+
+.tabla > h2 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+img {
+  width: 50px;
+  margin-bottom: 1px;
+}
+
+.tabla > p {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.boton {
+  display: inline-block;
+  width: 50px;
+  padding: 2px;
+  background: #2d63a1;
+  text-decoration: none;
+  color: #f8f8fa;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin: auto;
+}
+
+.tabla:hover {
+  background: #343759;
+  color: #f1f1f2;
+  transition: 0.8s all;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.boton:hover {
+  color: #2d63a1;
+  background-color: white;
+}
+
+/*
+@media screen and (max-width: 1000px) {
+  .tabla {
+    width: 45%;
+    max-width: none;
+    margin-bottom: 40px;
+    flex-grow: initial;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tabla {
+    width: 45%;
+    padding: 30px;
+  }
+  .tabla > h2 {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tabla {
+    width: 85%;
+    padding: 20px;
+  }
+}
+*/
