@@ -1,0 +1,95 @@
+.contenedorEspecialidades {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(100, 140, 129, 0.4);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.contenedorTitulo {
+  padding: 2rem;
+}
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(20, 50, 50);
+  font-weight: 600;
+}
+
+.contenedorLista {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 42rem;
+}
+
+.card {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 2rem;
+  width: 90vw;
+  height: 5rem;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.data .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(20, 50, 50);
+  font-size: 2rem;
+}
+
+.opc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.icono {
+  color: rgb(128, 185, 178);
+  width: 9rem;
+  font-size: 9rem;
+  font-weight: 700;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.icono:hover {
+  color: rgb(118, 165, 168);
+}
+
+.trash {
+  color: rgb(200, 40, 30);
+}
+.trash:hover {
+  color: rgb(240, 70, 70);
+}
+
+.editar {
+  color: rgb(30, 180, 120);
+}
+
+@media (max-width: 500px) {
+  .titulo {
+    font-size: 2rem;
+  }
+  .listElement {
+    width: 70vw;
+    font-size: 1.6rem;
+  }
+}
