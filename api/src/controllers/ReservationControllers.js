@@ -5,16 +5,11 @@ export default {
   createReservation: async (req, res, next) => {
     try {
       const reservation = await models.Reservation.create(req.body);
-
-      if (reservation) {
-        res.status(200).json({ reservation });
-      }
-      
-      res.json({ msg:'Deves llenar todos los datos requires para acer una reservación' })
+      res.status(200).json({ reservation });
     } catch (e) {
       
       res.status(500).send({
-        message: "Eror al intentar agregar reservación",
+        message: "Error al intentar agregar reservación",
       });
       
       next(e);
@@ -29,7 +24,7 @@ export default {
     } catch (e) {
       
       res.status(500).send({
-        message: "Eror al intentar listar las reservaciónes",
+        message: "Error al intentar listar las reservaciónes",
       });
       
       next(e);
@@ -42,7 +37,7 @@ export default {
         { _id: req.body._id },
         { name: req.body.name }
       );
-      res.status(200).json(reservation);
+      res.status(200).json({ reservation });
     } catch (e) {
       
       res.status(500).send({
@@ -60,7 +55,7 @@ export default {
         _id: req.body._id
       });
      
-      res.status(200).json(reservation);
+      res.status(200).json({ reservation });
     } catch (e) {
       
       res.status(500).send({
@@ -95,11 +90,11 @@ export default {
         { state: 0 }
       );
       
-      res.status(200).json(reservation);
+      res.status(200).json({ reservation });
     } catch (e) {
       
       res.status(500).send({
-        message: "Eror al intentar desactivar reservación",
+        message: "Error al intentar desactivar reservación",
       });
       next(e);
     }
