@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import estilo from "../../styles/Header.module.css";
-import logo from "../../images/logo4.jpg";
+import logo from "../../images/medic.svg";
 
 function Header() {
   return (

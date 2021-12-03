@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 p {
   font-size: 0.6em;
 }
@@ -6,16 +9,10 @@ h4 {
 }
 
 hr {
-  background-color: white;
+  background-color: rgb(226, 26, 26);
   width: 100%;
   height: 0.1px;
   margin: 10px 0px 10px 0px;
-}
-
-footer {
-  background-color: rgb(32, 34, 34);
-  color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .divs {
@@ -26,8 +23,8 @@ footer {
 ul {
   list-style: none;
   text-decoration: none;
+  margin-right: 10px;
 }
-
 .divs ul li a {
   list-style: none;
   text-decoration: none;
@@ -40,22 +37,52 @@ ul {
   width: 52px;
   border-radius: 10px;
 }
-.divcontacto {
+.divContacto {
+  background-color: rgb(128, 185, 178);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
 }
 
-form input {
-  color: rgb(71, 69, 69);
-  height: 20px;
-  width: 200px;
-  font-size: 12px;
-  border-radius: 15px;
-  margin-top: 2px;
-  outline: none;
-  border-radius: 5px;
-  color: hsl(195, 3%, 31%);
-  border: 1px solid hsl(192, 68%, 35%);
+/* .divfooter {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: red;
+} */
+
+footer {
+  background-color: rgb(32, 34, 34);
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@media screen and (min-with: 1024px) {
+  /* footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+  } */
+}
+@media screen and (min-with: 768px) {
+  /* footer {
+    display: grid;
+    grid-template-columns: 100%;
+  } */
+}
+@media screen and (min-with: 468px) {
+  /* footer {
+    display: grid;
+    grid-template-columns: 100%;
+  } */
+}
+@media screen and (min-with: 320px) {
+  /* footer {
+    display: grid;
+    grid-template-columns: 100%;
+  } */
 }

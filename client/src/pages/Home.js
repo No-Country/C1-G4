@@ -3,7 +3,7 @@ import styles from "../styles/home.module.css";
 const Home = () => {
   return (
     <div>
-      <p></p>
+      <p> </p>
     </div>
   );
 };

@@ -1,53 +1,49 @@
 import React, { Fragment } from "react";
 import styles from "../../styles/Footer.module.css";
-import logo from "../../images/logo4.jpg";
+import logo from "../../images/medic.svg";
 
 function Footer() {
   return (
     <Fragment>
       <div>
-        <footer>
-          <div className="divfooter" style={styles}>
-            <div className={styles.divs}>
-              <h4>Links</h4>
-              <ul>
-                <li>
-                  <a href="https://www.google.com.ar">Nosotros</a>
-                </li>
-                <li>
-                  <a href="# ">Preguntas frecuentes</a>
-                </li>
-                <li>
-                  <a href="# ">Terminos legales</a>
-                </li>
-                <li>
-                  <a href="# ">Ayuda</a>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.divs}>
-              <h4>Legal</h4>
-              <ul>
-                <li>
-                  <a href="# ">Terminos legales</a>
-                </li>
-                <li>
-                  <a href="# ">Politicas de privacidad</a>
-                </li>
-                <li>
-                  <a href="# ">Solicitud de baja</a>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.divs}>
-              <h4>Newsletter</h4>
-              <form action="#">
-                <input type="text" placeholder=" Ingresa tu email..." />
-              </form>
-            </div>
+        <footer className="divfooter" style={styles}>
+          <div id="linksfooter" className={styles.divs}>
+            <h4>Links</h4>
+            <ul>
+              <li>
+                <a href="https://www.google.com.ar">Nosotros</a>
+              </li>
+              <li>
+                <a href="# ">Preguntas frecuentes</a>
+              </li>
+              <li>
+                <a href="# ">Terminos legales</a>
+              </li>
+              <li>
+                <a href="# ">Ayuda</a>
+              </li>
+            </ul>
           </div>
+
+          <div id="legalfooter" className={styles.divs}>
+            <h4>Legal</h4>
+            <ul>
+              <li>
+                <a href="# ">Terminos legales</a>
+              </li>
+              <li>
+                <a href="# ">Politicas de privacidad</a>
+              </li>
+              <li>
+                <a href="# ">Solicitud de baja</a>
+              </li>
+            </ul>
+          </div>
+
           <hr />
-          <div className={styles.divcontacto}>
+        </footer>
+        <div className="footerBajo">
+          <div className={styles.divContacto}>
             <img className={styles.logo} src={logo} alt="" />
             <p>
               Avenida Calle 1500 <br />
@@ -55,7 +51,7 @@ function Footer() {
             </p>
             <p>Contactanos: 111 222 6789</p>
           </div>
-        </footer>
+        </div>
       </div>
     </Fragment>
   );
