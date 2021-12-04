@@ -5,7 +5,7 @@ const reservationSchema = new Schema({
       type:String,
       maxlength: 100,
       required: true,
-      unique
+      unique: true
     },
 
     create_at: {
