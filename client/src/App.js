@@ -16,9 +16,10 @@ import Administradores from "./pages/Administradores.jsx";
 import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
+import Card from "./components/Card/Card";
 
 const App = () => {
- // const user = useSelector((state) => state.auth.user);
+  // const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = () => {
       <Header />
       <Carousel />
       <Body />
+      <Card />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="signin" element={<Signin />} />
