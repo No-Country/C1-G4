@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Admin from "./pages/Admin.jsx";
-import Especialidades from "./pages/Especialidades.jsx";
+import Especialidades from "./pages/especialidades/Especialidades.jsx";
 import Medicos from "./pages/Medicos.jsx";
 import Usuarios from "./pages/Usuarios.jsx";
 import Administradores from "./pages/Administradores.jsx";
