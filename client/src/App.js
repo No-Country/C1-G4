@@ -8,8 +8,12 @@ import Home from "./pages/Home";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Admin from "./pages/Admin.jsx";
+//Especialidades
 import Especialidades from "./pages/especialidades/Especialidades.jsx";
-import Medicos from "./pages/Medicos.jsx";
+import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
+import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
+//Medicos
+import Medicos from "./pages/medicos/Medicos.jsx";
 import Usuarios from "./pages/Usuarios.jsx";
 import Administradores from "./pages/Administradores.jsx";
 
@@ -40,6 +44,8 @@ const App = () => {
         <Route path="signup" element={<Signup />} />
         <Route path="admin" element={<Admin />} />
         <Route path="especialidades" element={<Especialidades />} />
+        <Route path="especialidades/agregar" element={<AgregarEsp />} />
+        <Route path="especialidades/editar" element={<EditarEsp />} />
         <Route path="medicos" element={<Medicos />} />
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="administradores" element={<Administradores />} />

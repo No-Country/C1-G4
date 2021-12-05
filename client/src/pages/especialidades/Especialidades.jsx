@@ -32,8 +32,11 @@ const Especialidades = () => {
           <Card key={especialidad._id} especialidad={especialidad} />
         ))}
         <div className={styles.contenedorBotones}>
-          <Link to="/admin" className={styles.button}> Agregar </Link>
-          <Link to="/admin" className={styles.button + ' ' + styles.volver}>
+          <Link to="/especialidades/agregar" className={styles.button}>
+            {" "}
+            Agregar{" "}
+          </Link>
+          <Link to="/admin" className={styles.button + " " + styles.volver}>
             {" "}
             Volver{" "}
           </Link>

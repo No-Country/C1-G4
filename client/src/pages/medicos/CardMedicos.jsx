@@ -1,9 +1,10 @@
-import styles from "./../../styles/especialidades.module.css";
+import styles from "./../../styles/medicos.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ especialidad }) => {
-  const { _id, name } = especialidad;
+const CardMedicos = ({ medico }) => {
+  console.log(medico);
+  const { _id, name, lastname, email, phone, speciality, state } = medico;
 
   const [mostrar, saveMostrar] = useState(false);
 
@@ -18,7 +19,7 @@ const Card = ({ especialidad }) => {
   return (
     <div className={mostrar ? styles.card + " " + styles.grande : styles.card}>
       <div className={styles.data}>
-        <p className={styles.name}> {name} </p>
+        <p className={styles.name}> {name + " " + lastname} </p>
       </div>
       <div className={styles.opc}>
         <svg
@@ -93,12 +94,17 @@ const Card = ({ especialidad }) => {
           mostrar ? styles.extra + " " + styles.extraShow : styles.extra
         }
       >
-        <div className={styles.data}>
+        <div className={styles.maxdata}>
           <p className={styles.name}>ID: {_id} </p>
+          <p className={styles.name}>Lastname: {lastname}</p>
+          <p className={styles.name}>E-mail: {email} </p>
+          <p className={styles.name}>Phone: {phone}</p>
+          <p className={styles.name}>Especialidad: {speciality.name}</p>
+          <p className={styles.name}>Estado: { state === 1 ? 'Activo' : 'Inactivo' } </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default CardMedicos;
