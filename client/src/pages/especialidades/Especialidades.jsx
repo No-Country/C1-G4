@@ -1,6 +1,7 @@
 import styles from "./../../styles/especialidades.module.css";
 import Card from "./Card.jsx";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Especialidades = () => {
   const [especialidades, saveEspecialidades] = useState([
@@ -31,11 +32,11 @@ const Especialidades = () => {
           <Card key={especialidad._id} especialidad={especialidad} />
         ))}
         <div className={styles.contenedorBotones}>
-          <a href="/admin" className={styles.btn}> Agregar </a>
-          <a className={styles.btn} href="/admin">
+          <Link to="/admin" className={styles.button}> Agregar </Link>
+          <Link to="/admin" className={styles.button + ' ' + styles.volver}>
             {" "}
             Volver{" "}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
