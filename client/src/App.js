@@ -14,6 +14,9 @@ import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
 import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";
+import AgregarMed from "./pages/medicos/AgregarMed.jsx";
+import EditarMed from "./pages/medicos/EditarMed.jsx";
+
 import Usuarios from "./pages/Usuarios.jsx";
 import Administradores from "./pages/Administradores.jsx";
 
@@ -47,6 +50,8 @@ const App = () => {
         <Route path="especialidades/agregar" element={<AgregarEsp />} />
         <Route path="especialidades/editar" element={<EditarEsp />} />
         <Route path="medicos" element={<Medicos />} />
+        <Route path="medicos/agregar" element={<AgregarMed />} />
+        <Route path="medicos/editar" element={<EditarMed />} />
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="administradores" element={<Administradores />} />
       </Routes>
