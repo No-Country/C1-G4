@@ -1,7 +1,8 @@
 import styles from "./../../styles/especialidades.module.css";
 import Card from "./Card.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Especialidades = () => {
   const [especialidades, saveEspecialidades] = useState([
@@ -22,6 +23,21 @@ const Especialidades = () => {
       name: "Urologia",
     },
   ]);
+  useEffect(() => {
+    const listarEspecialidades = async () => {
+      await axios
+        .get("http://localhost:5000/api/speciality/list")
+        .then((res) => {
+          const { data } = res;
+          saveEspecialidades(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    };
+    listarEspecialidades();
+  }, [saveEspecialidades]);
+
   return (
     <div className={styles.contenedorEspecialidades}>
       <div className={styles.contenedorTitulo}>
