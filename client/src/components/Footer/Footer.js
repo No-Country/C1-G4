@@ -30,9 +30,12 @@ function Footer() {
             </p>
             <img className={styles.logo} src={logo} alt="" />
             <p>
-              Contactanos: <br /> 
+              Contacto <br /> 
               111 222 6789
             </p>
+        </div>
+        <div className={styles.copy}>
+          ©GRUPO Q4TRO
         </div>
       </div>  
     </Fragment>
