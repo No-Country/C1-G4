@@ -1,0 +1,192 @@
+.contenedorUsuarios {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(100, 140, 129, 0.4);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.contenedorTitulo {
+  padding: 2rem;
+}
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(20, 50, 50);
+  font-weight: 600;
+}
+
+.contenedorLista {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 42rem;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  width: 90vw;
+  height: 5rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  transition: 0.3s ease;
+}
+.grande {
+  height: 20rem;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+  width: 80%;
+  height: 5rem;
+}
+.data .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(20, 50, 50);
+  font-size: 1.4rem;
+  width: 50%;
+  font-weight: 600;
+}
+
+.maxdata {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+}
+.maxdata .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(20, 50, 50);
+  font-size: 1.4rem;
+  width: 50%;
+  font-weight: 600;
+}
+.opc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 5rem;
+}
+
+.icono {
+  color: rgb(128, 185, 178);
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.icono:hover {
+  transform: scale(1.4);
+}
+
+.trash {
+  display: none;
+  color: rgb(200, 40, 30);
+}
+.editar {
+  color: rgb(30, 180, 120);
+}
+.editar:hover {
+  color: rgb(20, 50, 30);
+}
+
+.check {
+  color: rgb(40, 70, 200);
+}
+
+.x {
+  display: none;
+  color: rgb(140, 20, 30);
+}
+
+.card .extra {
+  display: none;
+  background-color: rgba(30, 140, 200, 0.5);
+  width: 100%;
+  height: 0rem;
+  transition: 2s ease;
+}
+
+.card .extraShow {
+  display: flex;
+  height: 10rem;
+}
+
+.contenedorBotones {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.button {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.39rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid rgb(220, 250, 250);
+  color: white;
+  background-color: rgb(28, 85, 198);
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  transition: 0.6s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 3px solid transparent;
+  color: rgb(220, 250, 250);
+  font-weight: 800;
+  transform: scale(1.1);
+}
+
+.volver {
+  background-color: rgb(20, 30, 50);
+}
+
+@media (max-width: 500px) {
+  .titulo {
+    font-size: 2rem;
+  }
+  .listElement {
+    width: 70vw;
+    font-size: 1rem;
+  }
+  .data {
+    width: 60%;
+  }
+  .data .name {
+    font-size: 1.2rem;
+  }
+  .opc {
+    width: 40%;
+  }
+  .icono {
+    transform: scale(1.5);
+  }
+}
