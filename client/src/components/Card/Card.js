@@ -5,25 +5,28 @@ import logo from "../../images/medic.svg";
 function Card() {
   return (
     <Fragment>
-      <div className="contenedor">
-        <div className={styles.tabla}>
-          <h2>Especialidad</h2>
-          <img src={logo} alt="" />
-
-          <p>Ingresa aqui</p>
-          <a href="# " className={styles.boton}>
-            Ver +
-          </a>
-        </div>
-        <div className={styles.tabla}>
-          <h2>Especialidad</h2>
-          <img src={logo} alt="" />
-
-          <p>Ingresa aqui</p>
-          <a href="# " className={styles.boton}>
-            Ver +
-          </a>
-        </div>
+      <div className={styles.container}>
+        <a href="#" className={styles.btn}>
+          <div className={styles.boton}>
+            <h4>Turnos Disponibles</h4>
+            <img src={logo} alt="" />
+            <p>Ingresa aqui</p>
+          </div>
+        </a>
+        <a href="#" className={styles.btn}>
+          <div className={styles.boton}>
+            <h4>Historial Clinico</h4>
+            <img src={logo} alt="" />
+            <p>Ingresa aqui</p>
+          </div>
+        </a>
+        <a href="#" className={styles.btn}>
+          <div className={styles.boton}>
+            <h4>Cartilla Médicos</h4>
+            <img src={logo} alt="" />
+            <p>Ingresa aqui</p>
+          </div>
+        </a>
       </div>
     </Fragment>
   );
