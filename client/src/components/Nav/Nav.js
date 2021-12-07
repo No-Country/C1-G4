@@ -5,7 +5,7 @@ import logo from "../../images/medic.svg";
 
 function Nav() {
   return (
-    <nav className={"navbar-light navbar navbar-expand-lg " + styles.fondo}>
+    <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
       <div className="container-fluid ">
         <a className="navbar-brand" href="# ">
           <img className={estilo.logo} alt="" src={logo} />
@@ -22,7 +22,7 @@ function Nav() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className={styles.navul}>
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="# ">
                 Home
@@ -30,12 +30,12 @@ function Nav() {
             </li>
             <li className="nav-item">
               <a className="nav-link active" href="# ">
-                Features
+                Iniciar sesion
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" href="# ">
-                Pricing
+                Resgistrarse
               </a>
             </li>
             <li className="nav-item">
@@ -45,7 +45,7 @@ function Nav() {
                 tabindex="-1"
                 aria-disabled="true"
               >
-                Disabled
+                Mas info
               </a>
             </li>
           </ul>

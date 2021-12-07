@@ -1,21 +1,60 @@
 .fondo {
   background-image: url("../images/header.png");
-  min-height: 100px;
+  min-height: 160px;
   height: auto;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.navul {
+  border-radius: 8px;
+  position: absolute;
   z-index: 100;
+  padding: 1px;
+  background-color: rgb(75, 72, 73);
+  width: 500px;
+}
+
+.navul li {
+  color: white;
+
+  padding: 10px;
+}
+
+.navul li a {
+  color: rgb(243, 239, 239);
+  font-size: 25px;
+  padding: 10px;
 }
 
 @media screen and (min-width: 1024px) {
+  .navul {
+    border-radius: 8px;
+    display: flex;
+    width: 200px;
+    margin-left: 30%;
+  }
+  .navul li {
+    color: white;
+  }
 }
 @media screen and (min-width: 768px) {
+  .navul {
+    width: 100%;
+    border-radius: 8px;
+  }
 }
-@media screen and (min-width: 468px) {
-}
-@media screen and (min-width: 365px) {
+
+@media screen and (min-width: 320px) {
   .fondo {
-    background-size: 150%;
+    background-size: 100%;
+  }
+  .navul {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .navul a {
+    font-size: 20px;
   }
 }
