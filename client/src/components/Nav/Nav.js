@@ -6,9 +6,9 @@ import logo from "../../images/medic.svg";
 function Nav() {
   return (
     <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
-      <div className="container-fluid ">
+      <div className={"container-fluid " + styles.container}>
         <a className="navbar-brand" href="# ">
-          <img className={estilo.logo} alt="" src={logo} />
+          <img className={styles.logo} alt="" src={logo} />
         </a>
         <button
           className="navbar-toggler"

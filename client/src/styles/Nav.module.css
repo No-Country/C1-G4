@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .fondo {
   background-image: url("../images/header.png");
   min-height: 160px;
@@ -7,54 +11,77 @@
   background-repeat: no-repeat;
 }
 
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
 .navul {
   border-radius: 8px;
-  position: absolute;
   z-index: 100;
-  padding: 1px;
-  background-color: rgb(75, 72, 73);
-  width: 500px;
 }
 
 .navul li {
   color: white;
+  padding: 5px;
+}
 
-  padding: 10px;
+.navul li:hover {
+  background-color: rgb(61, 59, 59);
+  transition: 1.2s;
+  border-radius: 8px;
 }
 
 .navul li a {
-  color: rgb(243, 239, 239);
-  font-size: 25px;
-  padding: 10px;
+  color: rgb(49, 47, 47);
+  font-size: 22px;
+  padding: 8px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
 }
 
-@media screen and (min-width: 1024px) {
+.navul li a:hover {
+  color: rgb(234, 236, 240);
+}
+
+@media (min-width: 1024px) {
   .navul {
     border-radius: 8px;
     display: flex;
-    width: 200px;
-    margin-left: 30%;
+    margin-left: 45vw;
   }
+  .container {
+    display: flex;
+    align-items: stretch;
+  }
+
   .navul li {
     color: white;
   }
+  .navul li a {
+    font-size: 16px;
+  }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navul {
-    width: 100%;
     border-radius: 8px;
+    position: absolute;
   }
 }
 
-@media screen and (min-width: 320px) {
+@media (min-width: 320px) {
   .fondo {
     background-size: 100%;
   }
   .navul {
-    width: 100%;
     border-radius: 8px;
+    position: absolute;
   }
   .navul a {
     font-size: 20px;
+  }
+  .logo {
+    height: 70px;
+    width: 70px;
   }
 }
