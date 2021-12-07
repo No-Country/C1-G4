@@ -7,21 +7,9 @@ import axios from "axios";
 const Especialidades = () => {
   const [especialidades, saveEspecialidades] = useState([
     {
-      _id: "93929200203",
-      name: "Otorrinolaringologia",
-    },
-    {
-      _id: "82828123",
-      name: "Pediatra",
-    },
-    {
-      _id: "73662782",
-      name: "Nefrologia",
-    },
-    {
-      _id: "23929282",
-      name: "Urologia",
-    },
+      _id: "cargando",
+      name: "cargando",
+    } 
   ]);
   useEffect(() => {
     const listarEspecialidades = async () => {
