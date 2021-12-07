@@ -9,22 +9,22 @@ const Especialidades = () => {
     {
       _id: "cargando",
       name: "cargando",
-    } 
+    },
   ]);
+  const listarEspecialidades = async () => {
+    await axios
+      .get("http://localhost:5000/api/speciality/list")
+      .then((res) => {
+        const { data } = res;
+        saveEspecialidades(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
   useEffect(() => {
-    const listarEspecialidades = async () => {
-      await axios
-        .get("http://localhost:5000/api/speciality/list")
-        .then((res) => {
-          const { data } = res;
-          saveEspecialidades(data);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    };
     listarEspecialidades();
-  }, [saveEspecialidades]);
+  }, []);
 
   return (
     <div className={styles.contenedorEspecialidades}>
@@ -33,7 +33,11 @@ const Especialidades = () => {
       </div>
       <div className={styles.contenedorLista}>
         {especialidades.map((especialidad) => (
-          <Card key={especialidad._id} especialidad={especialidad} />
+          <Card
+            key={especialidad._id}
+            especialidad={especialidad}
+            listarEspecialidades={listarEspecialidades}
+          />
         ))}
         <div className={styles.contenedorBotones}>
           <Link to="/especialidades/agregar" className={styles.button}>
