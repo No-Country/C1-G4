@@ -18,14 +18,21 @@ const Card = ({ especialidad, listarEspecialidades }) => {
   //Funcion para activar una especialidad
   const activarEspecialidad = () => {
     axios
-      .put("http://localhost:5000/api/speciality/activate", { _id: _id })
+      .put("http://localhost:5000/api/speciality/activate", { '_id': _id })
       .then(console.log)
       .catch(console.log);
     listarEspecialidades();
   };
   const desactivarEspecialidad = () => {
     axios
-      .put("http://localhost:5000/api/speciality/deactivate", { _id: _id })
+      .put("http://localhost:5000/api/speciality/deactivate", { '_id': _id })
+      .then(console.log)
+      .catch(console.log);
+    listarEspecialidades();
+  };
+  const eliminarEspecialidad = () => {
+    axios
+      .delete("http://localhost:5000/api/speciality/remove", { data: { '_id': _id } })
       .then(console.log)
       .catch(console.log);
     listarEspecialidades();
@@ -58,6 +65,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
           fill="currentColor"
           className={"bi bi-trash-fill " + styles.icono + " " + styles.trash}
           viewBox="0 0 16 16"
+          onClick={eliminarEspecialidad}
         >
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
         </svg>
@@ -118,8 +126,8 @@ const Card = ({ especialidad, listarEspecialidades }) => {
         }
       >
         <div className={styles.maxdata}>
-          <p className={styles.name}>ID: {_id} </p>
-          <p className={styles.name}>
+          <p className={styles.maxname}>ID: {_id} </p>
+          <p className={styles.maxname}>
             Estado: {state === 1 ? "Activa" : "Inactiva"}{" "}
           </p>
         </div>

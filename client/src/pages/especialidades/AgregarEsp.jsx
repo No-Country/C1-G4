@@ -1,8 +1,10 @@
 import styles from "./../../styles/agregar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+
 const AgregarEsp = () => {
+  const navigate = useNavigate();
   //Crear State de Especialidad
   const [especialidad, guardarEspecialidad] = useState({
     name: "",
@@ -20,10 +22,21 @@ const AgregarEsp = () => {
 
   const agregarEspecialidad = async (e) => {
     e.preventDefault();
+    //Validacion
+    if (name.trim() === "") {
+      guardarError(true);
+      return;
+    }
+    //Eliminamos el error si existe uno previo
+    guardarError(false);
     //Peticion al backend para agregar una nueva especialidad
     axios
       .post("http://localhost:5000/api/speciality/add", { 'name': name })
-      .then(console.log)
+      .then((res) => {
+        alert("Especialidad agregada exitosamente", res);
+        //redireccionamos a la lista
+        navigate("/especialidades");
+      })
       .catch(console.log);
   };
 
@@ -33,8 +46,15 @@ const AgregarEsp = () => {
       <form onSubmit={agregarEspecialidad} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.label}> Nombre de la especialidad</label>
-          <input name="name" onChange={actualizarEspecialidad} className={styles.input} />
+          <input
+            name="name"
+            onChange={actualizarEspecialidad}
+            className={styles.input}
+          />
         </div>
+        {error ? (
+          <p className={styles.error}> Todos los campos son obligatorios </p>
+        ) : null}
         <div className={styles.formGroup}>
           <button type="submit" className={styles.button}>
             {" "}

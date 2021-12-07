@@ -1,9 +1,10 @@
 import styles from "./../../styles/agregar.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const EditarEsp = () => {
+  const navigate = useNavigate();
   //Recuperamos el parametro _id a traves de useParams de react router
   const { _id } = useParams();
   //Creamos el state de de especialidad
@@ -39,19 +40,31 @@ const EditarEsp = () => {
   const editarEspecialidad = async (e) => {
     e.preventDefault();
     //Petición al backend para editar una especialidad
+    //Validacion de datos
+    if (name.trim() === "") {
+      guardarError(true);
+      return;
+    }
+    //Eliminar el mensaje previo
+    guardarError(false);
+    //Llamada al api
     axios
-      .put(
-        "http://localhost:5000/api/speciality/update",
-        { '_id': _id, 
-        'name': name}
-      )
-      .then(console.log)
+      .put("http://localhost:5000/api/speciality/update", {
+        '_id': _id,
+        'name': name,
+      })
+      .then(res => {
+        alert("Especialidad modificada exitosamente");
+        //redireccionamos a la lista
+        navigate("/especialidades", res);
+      })
       .catch(console.log);
   };
 
   return (
     <div className={styles.contenedorAgregar}>
-      <h2 className={styles.titulo}> Editar especialidad {_id} </h2>
+      <h2 className={styles.titulo}> Editar especialidad </h2>
+     
       <form onSubmit={editarEspecialidad} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.label}> Nombre de la especialidad</label>
@@ -62,6 +75,9 @@ const EditarEsp = () => {
             className={styles.input}
           />
         </div>
+ {error ? (
+        <p className={styles.error}> Todos los campos son obligatorios </p>
+      ) : null}
         <div className={styles.formGroup}>
           <button type="submit" className={styles.button}>
             {" "}

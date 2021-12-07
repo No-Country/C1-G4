@@ -52,6 +52,12 @@
   outline: none;
 }
 
+.error {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(200, 40, 30);
+}
+
 .button {
   display: flex;
   justify-content: center;
