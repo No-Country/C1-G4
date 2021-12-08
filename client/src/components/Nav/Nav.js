@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import estilo from "../../styles/Header.module.css";
 import styles from "../../styles/Nav.module.css";
 import logo from "../../images/medic.svg";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -29,14 +30,14 @@ function Nav() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="# ">
+              <Link className="nav-link active" to="/signin">
                 Iniciar sesion
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="# ">
+              <Link className="nav-link active" to="/signup">
                 Resgistrarse
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a

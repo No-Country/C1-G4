@@ -1,5 +1,4 @@
-/* General */
-.container {
+container {
   background-color: var(--primary-color);
   width: 100vw;
   height: 100vh;
@@ -10,7 +9,7 @@
 .formContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 450px;
+  grid-template-rows: 500px;
   margin: 0 auto;
   width: 90%;
   max-width: 300px;
@@ -19,7 +18,7 @@
 .form {
   background-color: var(--bg-color);
   box-shadow: var(--shadow);
-  padding: 15px 20px;
+  padding: 30px 20px;
   margin-top: 40px;
   border-radius: 4px;
 }
@@ -28,7 +27,7 @@
 
 .formImg {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./../images/carrusel5.jpg") center no-repeat;
+    url("./../images/carrusel4.jpg") center no-repeat;
   background-size: cover;
   filter: blur(3px);
 
@@ -80,7 +79,7 @@
     margin-top: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    padding: 30px 40px;
+    padding: 50px 40px;
   }
 
   .formImg {
