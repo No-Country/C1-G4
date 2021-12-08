@@ -12,8 +12,8 @@ const Especialidades = () => {
     },
   ]);
   const listarEspecialidades = async () => {
-    await axios
-      .get("http://localhost:5000/api/speciality/list")
+    axios
+      .get("speciality/list")
       .then((res) => {
         const { data } = res;
         saveEspecialidades(data);

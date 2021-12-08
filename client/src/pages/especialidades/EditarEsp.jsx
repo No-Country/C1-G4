@@ -15,7 +15,7 @@ const EditarEsp = () => {
   //Funcion para cargar los campos de cada input
   const cargarEspecialidadPorId = async () => {
     axios
-      .get("http://localhost:5000/api/speciality/get?_id=" + _id)
+      .get("speciality/get?_id=" + _id)
       .then((res) => {
         const { data } = res;
         guardarEspecialidad(data);
@@ -49,9 +49,9 @@ const EditarEsp = () => {
     guardarError(false);
     //Llamada al api
     axios
-      .put("http://localhost:5000/api/speciality/update", {
-        '_id': _id,
-        'name': name,
+      .put("speciality/update", {
+        _id,
+        name
       })
       .then(res => {
         alert("Especialidad modificada exitosamente");

@@ -56,7 +56,7 @@ const App = () => {
         <Route path="especialidades/editar/:_id" element={<EditarEsp />} />
         <Route path="medicos" element={<Medicos />} />
         <Route path="medicos/agregar" element={<AgregarMed />} />
-        <Route path="medicos/editar" element={<EditarMed />} />
+        <Route path="medicos/editar/:_id" element={<EditarMed />} />
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="usuarios/agregar" element={<AgregarUsr />} />
         <Route path="usuarios/editar" element={<EditarUsr />} />

@@ -18,21 +18,21 @@ const Card = ({ especialidad, listarEspecialidades }) => {
   //Funcion para activar una especialidad
   const activarEspecialidad = () => {
     axios
-      .put("http://localhost:5000/api/speciality/activate", { '_id': _id })
+      .put("speciality/activate", { '_id': _id })
       .then(console.log)
       .catch(console.log);
     listarEspecialidades();
   };
   const desactivarEspecialidad = () => {
     axios
-      .put("http://localhost:5000/api/speciality/deactivate", { '_id': _id })
+      .put("speciality/deactivate", { '_id': _id })
       .then(console.log)
       .catch(console.log);
     listarEspecialidades();
   };
   const eliminarEspecialidad = () => {
     axios
-      .delete("http://localhost:5000/api/speciality/remove", { data: { '_id': _id } })
+      .delete("speciality/remove", { data: { '_id': _id } })
       .then(console.log)
       .catch(console.log);
     listarEspecialidades();

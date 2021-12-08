@@ -31,7 +31,7 @@ const AgregarEsp = () => {
     guardarError(false);
     //Peticion al backend para agregar una nueva especialidad
     axios
-      .post("http://localhost:5000/api/speciality/add", { 'name': name })
+      .post("speciality/add", { name })
       .then((res) => {
         alert("Especialidad agregada exitosamente", res);
         //redireccionamos a la lista

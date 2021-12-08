@@ -104,7 +104,6 @@
 }
 
 .trash {
-  display: none;
   color: rgb(200, 40, 30);
 }
 .editar {
@@ -119,7 +118,6 @@
 }
 
 .x {
-  display: none;
   color: rgb(140, 20, 30);
 }
 
