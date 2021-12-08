@@ -32,6 +32,7 @@
   transform: scale(1.1);
   cursor: pointer;
 }
+
 /* Elementos */
 img{
   width: 25%;
@@ -62,5 +63,13 @@ a{
   display: grid;
   align-items: stretch;
   justify-content: center;
+  }
+
+  .boton:hover{
+  background: #343759;
+  color: #f1f1f2;
+  transition: 0.5s;
+  transform: scale(1.05);
+  cursor: pointer;
   }
 }
