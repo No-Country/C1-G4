@@ -52,6 +52,7 @@ export default {
           lastname: req.body.lastname,
           email: req.body.email,
           phone: req.body.phone,
+          speciality: req.body.speciality
         }
       );
       res.status(200).json(reg);

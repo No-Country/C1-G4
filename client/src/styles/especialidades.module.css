@@ -50,7 +50,7 @@
   padding-left: 1rem;
   padding-top: 1rem;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 5rem;
 }
 
@@ -178,13 +178,13 @@
     font-size: 1rem;
   }
   .data {
-    width: 60%;
+    width: 45%;
   }
   .data .name {
     font-size: 1.2rem;
   }
   .opc {
-    width: 40%;
+    width: 55%;
   }
   .icono {
     transform: scale(1.5);

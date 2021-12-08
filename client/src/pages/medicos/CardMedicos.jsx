@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const CardMedicos = ({ medico, listarMedicos }) => {
-  console.log(medico);
   const { _id, name, lastname, email, phone, speciality, state } = medico;
 
   const [mostrar, saveMostrar] = useState(false);
@@ -129,12 +128,12 @@ const CardMedicos = ({ medico, listarMedicos }) => {
         }
       >
         <div className={styles.maxdata}>
-          <p className={styles.name}>ID: {_id} </p>
-          <p className={styles.name}>Lastname: {lastname}</p>
-          <p className={styles.name}>E-mail: {email} </p>
-          <p className={styles.name}>Phone: {phone}</p>
-          <p className={styles.name}>Especialidad: {speciality.name}</p>
-          <p className={styles.name}>
+          <p className={styles.maxname}>ID: {_id} </p>
+          <p className={styles.maxname}>Lastname: {lastname}</p>
+          <p className={styles.maxname}>E-mail: {email} </p>
+          <p className={styles.maxname}>Phone: {phone}</p>
+          <p className={styles.maxname}>Especialidad: {speciality.name}</p>
+          <p className={styles.maxname}>
             Estado: {state === 1 ? "Activo" : "Inactivo"}{" "}
           </p>
         </div>

@@ -1,77 +1,32 @@
 import styles from "./../../styles/usuarios.module.css";
 import Card from "./CardUsr.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const Usuarios = () => {
-  const [usuarios, saveUsuarios] = useState([
+  const [usuarios, guardarUsuarios] = useState([
     {
-      _id: "674333203",
-      name: "Pedro",
-      lastname: "Perez",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 1,
-    },
-    {
-      _id: "321112353",
-      name: "Roxana",
-      lastname: "Aguilar",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 0,
-    },
-    {
-      _id: "444556323",
-      name: "Mario",
-      lastname: "Beltran",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 1,
-    },
-    {
-      _id: "211234789",
-      name: "Gerania",
-      lastname: "Rodriguez",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 1,
-    },
-    {
-      _id: "70949932",
-      name: "Roberto",
-      lastname: "Gomez",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 1,
-    },
-    {
-      _id: "566117211",
-      name: "Humberto",
-      lastname: "Gonzales",
-      email: "pperez@gmail.com",
-      phone: "99888392",
-      speciality: {
-        name: "Urologia",
-      },
-      state: 1,
+      _id: "cargando",
+      username: "cargando",
+      name: "cargando",
+      lastname: "cargando",
+      email: "cargando",
+      status: 1,
+      rol: "cargando",
     },
   ]);
+  const listarUsuarios = async () => {
+    axios
+      .get("user/list")
+      .then((res) => {
+        guardarUsuarios(res.data);
+      })
+      .catch(console.log);
+  };
+  useEffect(() => {
+    listarUsuarios();
+  }, []);
+
   return (
     <div className={styles.contenedorUsuarios}>
       <div className={styles.contenedorTitulo}>
@@ -79,7 +34,11 @@ const Usuarios = () => {
       </div>
       <div className={styles.contenedorLista}>
         {usuarios.map((usuario) => (
-          <Card key={usuario._id} usuario={usuario} />
+          <Card
+            key={usuario._id}
+            usuario={usuario}
+            listarUsuarios={listarUsuarios}
+          />
         ))}
         <div className={styles.contenedorBotones}>
           <Link to="/usuarios/agregar" className={styles.button}>

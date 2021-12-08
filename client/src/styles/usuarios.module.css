@@ -74,7 +74,7 @@
   width: 100%;
   height: 5rem;
 }
-.maxdata .name {
+.maxdata .maxname {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -104,7 +104,6 @@
 }
 
 .trash {
-  display: none;
   color: rgb(200, 40, 30);
 }
 .editar {
@@ -119,7 +118,6 @@
 }
 
 .x {
-  display: none;
   color: rgb(140, 20, 30);
 }
 
@@ -133,7 +131,7 @@
 
 .card .extraShow {
   display: flex;
-  height: 10rem;
+  height: 13rem;
 }
 
 .contenedorBotones {
@@ -178,15 +176,27 @@
     font-size: 1rem;
   }
   .data {
-    width: 60%;
+    width: 50%;
   }
   .data .name {
+    width: 100%;
     font-size: 1.2rem;
   }
   .opc {
-    width: 40%;
+    width: 50%;
   }
   .icono {
     transform: scale(1.5);
+  }
+
+  .maxdata .maxname {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .card .extraShow {
+    height: 20rem;
+  }
+  .grande {
+    height: 27rem;
   }
 }

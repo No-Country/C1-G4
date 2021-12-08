@@ -1,10 +1,10 @@
 import styles from "./../../styles/usuarios.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-const CardUsr = ({ usuario }) => {
-  console.log(usuario);
-  const { _id, name, lastname, email, phone, speciality, state } = usuario;
+const CardUsr = ({ usuario, listarUsuarios }) => {
+  const { _id, username, name, lastname, email, status, rol } = usuario;
 
   const [mostrar, saveMostrar] = useState(false);
 
@@ -14,6 +14,33 @@ const CardUsr = ({ usuario }) => {
     } else {
       saveMostrar(true);
     }
+  };
+  const activarUsuario = async () => {
+    axios
+      .put("user/activate", { _id })
+      .then((res) => {
+        console.log("Usuario activado", res);
+        listarUsuarios();
+      })
+      .catch(console.log);
+  };
+  const desactivarUsuario = async () => {
+    axios
+      .put("user/deactivate", { _id })
+      .then((res) => {
+        console.log("Usuario desactivado", res);
+        listarUsuarios();
+      })
+      .catch(console.log);
+  };
+  const eliminarUsuario = async () => {
+    axios
+      .delete("user/remove", {data:{_id:_id}})
+      .then((res) => {
+        console.log("Usuario eliminado", res);
+        listarUsuarios();
+      })
+      .catch(console.log);
   };
 
   return (
@@ -40,6 +67,7 @@ const CardUsr = ({ usuario }) => {
           fill="currentColor"
           className={"bi bi-trash-fill " + styles.icono + " " + styles.trash}
           viewBox="0 0 16 16"
+          onClick={eliminarUsuario}
         >
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
         </svg>
@@ -60,34 +88,39 @@ const CardUsr = ({ usuario }) => {
             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
           />
         </Link>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="currentColor"
-          className={
-            "bi bi-bookmark-check-fill " + styles.icono + " " + styles.check
-          }
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          fill="currentColor"
-          className={"bi bi-bookmark-x-fill " + styles.icono + " " + styles.x}
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM6.854 5.146a.5.5 0 1 0-.708.708L7.293 7 6.146 8.146a.5.5 0 1 0 .708.708L8 7.707l1.146 1.147a.5.5 0 1 0 .708-.708L8.707 7l1.147-1.146a.5.5 0 0 0-.708-.708L8 6.293 6.854 5.146z"
-          />
-        </svg>
+        {status === 1 ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            className={
+              "bi bi-bookmark-check-fill " + styles.icono + " " + styles.check
+            }
+            viewBox="0 0 16 16"
+            onClick={desactivarUsuario}
+          >
+            <path
+              fillRule="evenodd"
+              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            className={"bi bi-bookmark-x-fill " + styles.icono + " " + styles.x}
+            viewBox="0 0 16 16"
+            onClick={activarUsuario}
+          >
+            <path
+              fillRule="evenodd"
+              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM6.854 5.146a.5.5 0 1 0-.708.708L7.293 7 6.146 8.146a.5.5 0 1 0 .708.708L8 7.707l1.146 1.147a.5.5 0 1 0 .708-.708L8.707 7l1.147-1.146a.5.5 0 0 0-.708-.708L8 6.293 6.854 5.146z"
+            />
+          </svg>
+        )}
       </div>
       <div
         className={
@@ -95,12 +128,15 @@ const CardUsr = ({ usuario }) => {
         }
       >
         <div className={styles.maxdata}>
-          <p className={styles.name}>ID: {_id} </p>
-          <p className={styles.name}>Lastname: {lastname}</p>
-          <p className={styles.name}>E-mail: {email} </p>
-          <p className={styles.name}>Phone: {phone}</p>
-          <p className={styles.name}>Especialidad: {speciality.name}</p>
-          <p className={styles.name}>Estado: { state === 1 ? 'Activo' : 'Inactivo' } </p>
+          <p className={styles.maxname}>ID: {_id} </p>
+          <p className={styles.maxname}>Username: {username} </p>
+          <p className={styles.maxname}>Nombre: {name} </p>
+          <p className={styles.maxname}>Apellido: {lastname}</p>
+          <p className={styles.maxname}>E-mail: {email} </p>
+          <p className={styles.maxname}>Rol: {rol}</p>
+          <p className={styles.maxname}>
+            Estado: {status === 1 ? "Activo" : "Inactivo"}{" "}
+          </p>
         </div>
       </div>
     </div>

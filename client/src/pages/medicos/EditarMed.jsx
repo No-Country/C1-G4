@@ -70,7 +70,7 @@ const EditarMed = () => {
         speciality,
       })
       .then((res) => {
-        alert("Medico agregado exitosamente", res);
+        alert("Medico editado exitosamente", res);
         //redireccionamos a la lista
         navigate("/medicos");
       })
