@@ -1,4 +1,5 @@
 import styles from "./../styles/admin.module.css";
+import { Link } from "react-router-dom";
 
 const Admin = () => {
   return (
@@ -8,18 +9,18 @@ const Admin = () => {
       </div>
       <div className={styles.contenedorLinks}>
         <ul className={styles.unorderList}>
-          <a href="/especialidades" className={styles.listElement}>
+          <Link to="/especialidades" className={styles.listElement}>
             Especialidades
-          </a>
-          <a href="/medicos" className={styles.listElement}>
+          </Link>
+          <Link to="/medicos" className={styles.listElement}>
             Médicos
-          </a>
-          <a href="/usuarios" className={styles.listElement}>
+          </Link>
+          <Link to="/usuarios" className={styles.listElement}>
             Usuarios
-          </a>
-          <a href="/administradores" className={styles.listElement}>
+          </Link>
+          <Link to="/administradores" className={styles.listElement}>
             Administradores
-          </a>
+          </Link>
         </ul>
       </div>
     </div>
