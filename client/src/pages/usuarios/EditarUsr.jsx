@@ -1,7 +1,21 @@
 import styles from "./../../styles/agregar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 
 const EditarUsr = () => {
+  //states
+  const [ usuario, guardarUsuario ] = useState({
+
+  });
+  //extraemos el parametro _id
+  const { _id } = useParams();
+  // funcion para consultar usuario
+  const consultarUsuario = () => {
+    
+  };
+
+
+
   return (
     <div className={styles.contenedorAgregar}>
       <h2 className={styles.titulo}> Editar usuario </h2>

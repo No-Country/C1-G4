@@ -47,7 +47,6 @@
 .data {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   padding-left: 1rem;
   padding-top: 1rem;
   align-items: center;

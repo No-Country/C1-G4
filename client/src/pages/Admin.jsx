@@ -17,10 +17,7 @@ const Admin = () => {
           </Link>
           <Link to="/usuarios" className={styles.listElement}>
             Usuarios
-          </Link>
-          <Link to="/administradores" className={styles.listElement}>
-            Administradores
-          </Link>
+          </Link> 
         </ul>
       </div>
     </div>
