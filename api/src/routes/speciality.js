@@ -7,6 +7,8 @@ router.post("/add", spcecialityController.add);
 
 router.get("/list", spcecialityController.list);
 
+router.get("/get", spcecialityController.getById);
+
 router.put("/update", spcecialityController.update);
 
 router.delete("/remove", spcecialityController.remove);

@@ -23,6 +23,25 @@ export default {
       next(e);
     }
   },
+  getById: async (req, res, next) => {
+    try {
+      const reg = await models.Speciality.findById({
+        _id: req.query._id,
+      });
+      if (!reg) {
+        res.status(404).send({
+          message: "Especialidad no encontrada",
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Error al intentar encontrar especialidad",
+      });
+      next(e);
+    }
+  },
   update: async (req, res, next) => {
     try {
       const reg = await models.Speciality.findByIdAndUpdate(
@@ -40,7 +59,7 @@ export default {
   remove: async (req, res, next) => {
     try {
       const reg = await models.Speciality.findByIdAndDelete({
-        _id: req.body._id
+        _id: req.body._id,
       });
       res.status(200).json(reg);
     } catch (e) {
@@ -77,6 +96,5 @@ export default {
       });
       next(e);
     }
-
-  }
+  },
 };
