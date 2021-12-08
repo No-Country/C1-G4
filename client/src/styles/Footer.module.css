@@ -1,88 +1,59 @@
+/* global */
 * {
   box-sizing: border-box;
-}
-p {
-  font-size: 0.6em;
-}
-h4 {
-  color: hsl(192, 68%, 35%);
+  margin: 0;
+  padding: 0;
 }
 
-hr {
-  background-color: rgb(226, 26, 26);
-  width: 100%;
-  height: 0.1px;
-  margin: 10px 0px 10px 0px;
-}
-
-.divs {
-  padding-top: 8px;
-  margin-left: 15px;
-}
-
-ul {
-  list-style: none;
-  text-decoration: none;
-  margin-right: 10px;
-}
-.divs ul li a {
-  list-style: none;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 0.8em;
-}
-.logo {
-  height: 50px;
-  width: 52px;
-  border-radius: 10px;
-}
-.divContacto {
-  background-color: rgb(128, 185, 178);
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-}
-
-/* .divfooter {
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: red;
-} */
-
-footer {
-  background-color: rgb(32, 34, 34);
-  color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
+/* divs */
+.upFooter{
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  height: 9rem;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+.elements{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
 }
 
-@media screen and (min-with: 1024px) {
-  /* footer {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    text-align: center;
-  } */
+.lowFooter{
+  background-color: rgb(219, 219, 219);
+  align-items: center;
 }
-@media screen and (min-with: 768px) {
-  /* footer {
-    display: grid;
-    grid-template-columns: 100%;
-  } */
+
+.copy{
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  color: rgba(128, 185, 178);
+  text-align: center;
 }
-@media screen and (min-with: 468px) {
-  /* footer {
-    display: grid;
-    grid-template-columns: 100%;
-  } */
+
+/* componentes */
+h4{
+  color: hsl(192, 68%, 35%);
+  margin: 0 5% 0 5%;
+  font-weight: bold;
 }
-@media screen and (min-with: 320px) {
-  /* footer {
-    display: grid;
-    grid-template-columns: 100%;
-  } */
+a{
+  color: rgba(128, 185, 178);
+  text-decoration: none;
+  margin: 0 5% 0 5%;
 }
+p{
+  margin: 0 0 0 5%;
+  font-weight: bold;
+  font-size: small;
+  text-align: center;
+}
+.logo{
+  width: 100%;
+  align-items: center;
+}
+
+/* MediaQueries */
+
