@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import estilo from "../../styles/Header.module.css";
 import styles from "../../styles/Nav.module.css";
 import logo from "../../images/medic.svg";
+import { Link } from "react-router-dom"
 
 function Nav() {
   return (
