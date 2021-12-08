@@ -45,9 +45,11 @@ const App = () => {
       <Header />
       <Carousel />
       <Body />
-      <Card />
       <Routes>
         <Route path="/" element={<Home />} />
+      </Routes>
+      <Card />
+      <Routes>
         <Route path="signin" element={<Signin />} />
         <Route path="signup" element={<Signup />} />
         <Route path="admin" element={<Admin />} />
