@@ -34,7 +34,6 @@ export default {
         { name: req.body.name },
         { lastname: req.body.lastname },
         { email: req.body.email },
-        { password: req.body.password },
         { rol: req.body.rol },
         { created_at: req.body.created_at }
       );
@@ -45,6 +44,9 @@ export default {
       });
       next(e);
     }
+  },
+  changePassword: async (req, res, next) => {
+    //TODO metodo para cambiar de contraseña
   },
   activate: async (req, res, next) => {
     try {
@@ -70,6 +72,23 @@ export default {
     } catch (e) {
       res.status(500).send({
         message: "Error al cargar administrador",
+      });
+      next(e);
+    }
+  },
+  remove: async (req, res, next) => {
+    try {
+      const reg = await models.User.findByIdAndDelete({
+        _id: req.body._id,
+      });
+      if (!reg) {
+        res.status(404).send({ message: "Usuario no encontrado" });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Error al intentar eliminar usuario",
       });
       next(e);
     }
@@ -103,4 +122,3 @@ export default {
     }
   },
 };
-

@@ -1,27 +1,31 @@
 import styles from "./../../styles/especialidades.module.css";
 import Card from "./Card.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Especialidades = () => {
   const [especialidades, saveEspecialidades] = useState([
     {
-      _id: "93929200203",
-      name: "Otorrinolaringologia",
-    },
-    {
-      _id: "82828123",
-      name: "Pediatra",
-    },
-    {
-      _id: "73662782",
-      name: "Nefrologia",
-    },
-    {
-      _id: "23929282",
-      name: "Urologia",
+      _id: "cargando",
+      name: "cargando",
     },
   ]);
+  const listarEspecialidades = async () => {
+    axios
+      .get("speciality/list")
+      .then((res) => {
+        const { data } = res;
+        saveEspecialidades(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+  useEffect(() => {
+    listarEspecialidades();
+  }, []);
+
   return (
     <div className={styles.contenedorEspecialidades}>
       <div className={styles.contenedorTitulo}>
@@ -29,7 +33,11 @@ const Especialidades = () => {
       </div>
       <div className={styles.contenedorLista}>
         {especialidades.map((especialidad) => (
-          <Card key={especialidad._id} especialidad={especialidad} />
+          <Card
+            key={especialidad._id}
+            especialidad={especialidad}
+            listarEspecialidades={listarEspecialidades}
+          />
         ))}
         <div className={styles.contenedorBotones}>
           <Link to="/especialidades/agregar" className={styles.button}>

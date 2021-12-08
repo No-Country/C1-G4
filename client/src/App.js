@@ -14,8 +14,16 @@ import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
 import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";
-import Usuarios from "./pages/Usuarios.jsx";
-import Administradores from "./pages/Administradores.jsx";
+import AgregarMed from "./pages/medicos/AgregarMed.jsx";
+import EditarMed from "./pages/medicos/EditarMed.jsx";
+//Usuarios
+import Usuarios from "./pages/usuarios/Usuarios.jsx";
+import AgregarUsr from "./pages/usuarios/AgregarUsr.jsx";
+import EditarUsr from "./pages/usuarios/EditarUsr.jsx";
+//Administradores
+import Administradores from "./pages/administradores/Administradores.jsx";
+import AgregarAdm from "./pages/administradores/AgregarAdm.jsx";
+import EditarAdm from "./pages/administradores/EditarAdm.jsx";
 
 import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
@@ -45,10 +53,16 @@ const App = () => {
         <Route path="admin" element={<Admin />} />
         <Route path="especialidades" element={<Especialidades />} />
         <Route path="especialidades/agregar" element={<AgregarEsp />} />
-        <Route path="especialidades/editar" element={<EditarEsp />} />
+        <Route path="especialidades/editar/:_id" element={<EditarEsp />} />
         <Route path="medicos" element={<Medicos />} />
+        <Route path="medicos/agregar" element={<AgregarMed />} />
+        <Route path="medicos/editar/:_id" element={<EditarMed />} />
         <Route path="usuarios" element={<Usuarios />} />
+        <Route path="usuarios/agregar" element={<AgregarUsr />} />
+        <Route path="usuarios/editar" element={<EditarUsr />} />
         <Route path="administradores" element={<Administradores />} />
+        <Route path="administradores/agregar" element={<AgregarAdm />} />
+        <Route path="administradores/editar" element={<EditarAdm />} />
       </Routes>
       <Footer />
     </BrowserRouter>

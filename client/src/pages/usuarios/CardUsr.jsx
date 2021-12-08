@@ -1,13 +1,13 @@
-import styles from "./../../styles/especialidades.module.css";
-import axios from "axios";
+import styles from "./../../styles/usuarios.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-const Card = ({ especialidad, listarEspecialidades }) => {
-  const { _id, name, state } = especialidad;
-  //Estado que activa la funcion para desplegar la informacion extra
+const CardUsr = ({ usuario, listarUsuarios }) => {
+  const { _id, username, name, lastname, email, status, rol } = usuario;
+
   const [mostrar, saveMostrar] = useState(false);
-  //Funcion que despliega la informacion extra
+
   const toggleMostrar = () => {
     if (mostrar) {
       saveMostrar(false);
@@ -15,36 +15,38 @@ const Card = ({ especialidad, listarEspecialidades }) => {
       saveMostrar(true);
     }
   };
-  //Funcion para activar una especialidad
-  const activarEspecialidad = () => {
+  const activarUsuario = async () => {
     axios
-      .put("speciality/activate", { '_id': _id })
-      .then(console.log)
+      .put("user/activate", { _id })
+      .then((res) => {
+        console.log("Usuario activado", res);
+        listarUsuarios();
+      })
       .catch(console.log);
-    listarEspecialidades();
   };
-  const desactivarEspecialidad = () => {
+  const desactivarUsuario = async () => {
     axios
-      .put("speciality/deactivate", { '_id': _id })
-      .then(console.log)
+      .put("user/deactivate", { _id })
+      .then((res) => {
+        console.log("Usuario desactivado", res);
+        listarUsuarios();
+      })
       .catch(console.log);
-    listarEspecialidades();
   };
-  const eliminarEspecialidad = () => {
+  const eliminarUsuario = async () => {
     axios
-      .delete("speciality/remove", { data: { '_id': _id } })
-      .then(console.log)
+      .delete("user/remove", {data:{_id:_id}})
+      .then((res) => {
+        console.log("Usuario eliminado", res);
+        listarUsuarios();
+      })
       .catch(console.log);
-    listarEspecialidades();
   };
 
   return (
     <div className={mostrar ? styles.card + " " + styles.grande : styles.card}>
       <div className={styles.data}>
-        <p className={styles.name}>
-          {" "}
-          {state === 1 ? name : name + " (Inactiva)"}{" "}
-        </p>
+        <p className={styles.name}> {name + " " + lastname} </p>
       </div>
       <div className={styles.opc}>
         <svg
@@ -65,7 +67,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
           fill="currentColor"
           className={"bi bi-trash-fill " + styles.icono + " " + styles.trash}
           viewBox="0 0 16 16"
-          onClick={eliminarEspecialidad}
+          onClick={eliminarUsuario}
         >
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
         </svg>
@@ -77,7 +79,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
           className={
             "bi bi-pencil-square " + styles.icono + " " + styles.editar
           }
-          to={"/especialidades/editar/" + _id}
+          to="/medicos/editar"
           viewBox="0 0 16 16"
         >
           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
@@ -86,7 +88,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
             d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
           />
         </Link>
-        {state === 0 ? (
+        {status === 1 ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -96,7 +98,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
               "bi bi-bookmark-check-fill " + styles.icono + " " + styles.check
             }
             viewBox="0 0 16 16"
-            onClick={activarEspecialidad}
+            onClick={desactivarUsuario}
           >
             <path
               fillRule="evenodd"
@@ -111,7 +113,7 @@ const Card = ({ especialidad, listarEspecialidades }) => {
             fill="currentColor"
             className={"bi bi-bookmark-x-fill " + styles.icono + " " + styles.x}
             viewBox="0 0 16 16"
-            onClick={desactivarEspecialidad}
+            onClick={activarUsuario}
           >
             <path
               fillRule="evenodd"
@@ -127,8 +129,13 @@ const Card = ({ especialidad, listarEspecialidades }) => {
       >
         <div className={styles.maxdata}>
           <p className={styles.maxname}>ID: {_id} </p>
+          <p className={styles.maxname}>Username: {username} </p>
+          <p className={styles.maxname}>Nombre: {name} </p>
+          <p className={styles.maxname}>Apellido: {lastname}</p>
+          <p className={styles.maxname}>E-mail: {email} </p>
+          <p className={styles.maxname}>Rol: {rol}</p>
           <p className={styles.maxname}>
-            Estado: {state === 1 ? "Activa" : "Inactiva"}{" "}
+            Estado: {status === 1 ? "Activo" : "Inactivo"}{" "}
           </p>
         </div>
       </div>
@@ -136,4 +143,4 @@ const Card = ({ especialidad, listarEspecialidades }) => {
   );
 };
 
-export default Card;
+export default CardUsr;
