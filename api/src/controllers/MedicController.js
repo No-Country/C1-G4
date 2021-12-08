@@ -15,8 +15,7 @@ export default {
   list: async (req, res, next) => {
     try {
       const reg = await models.Medic.find()
-        .populate("speciality", { name: 1 }) 
-        .sort({ created_at: -1 });
+        .populate("speciality", { name: 1 });
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -27,7 +26,7 @@ export default {
   },
   query: async (req, res, next) => {
     try {
-      const reg = await models.Medic.findOneById({ _id: req.query._id });
+      const reg = await models.Medic.findById({ _id: req.query._id });
       if (!reg) {
         res.status(404).send({
           message: "Medico no encontrado",
