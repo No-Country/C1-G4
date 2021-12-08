@@ -23,8 +23,8 @@
   flex-wrap: wrap-reverse;
   text-align: center;
   align-items: center;
-
 }
+
 .boton:hover{
   background: #343759;
   color: #f1f1f2;
@@ -38,4 +38,29 @@ img{
 }
 a{
   margin: 5%;
+}
+
+
+@media screen and (min-width: 1025px) {
+}
+@media (min-width: 768px) and (max-width:1024px) {
+}
+@media (min-width: 366px) and (max-width:767px) {
+    .container{
+  background-color: rgb(214, 214, 214);
+  display: grid;
+  align-items: stretch;
+  justify-content: center;
+  }
+}
+@media (min-width: 160px) and (max-width: 365px) {
+  .fondo {
+    background-size: 150%;
+  }
+  .container{
+  background-color: rgb(214, 214, 214);
+  display: grid;
+  align-items: stretch;
+  justify-content: center;
+  }
 }
