@@ -1,6 +1,6 @@
 /* General */
 .container {
-  background-color: var(--primary-color);
+  background-color: rgb(24, 104, 131);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,11 +17,11 @@
 }
 
 .form {
-  background-color: var(--bg-color);
-  box-shadow: var(--shadow);
+  background-color: white;
+  box-shadow: 3px 3px;
   padding: 15px 20px;
   margin-top: 40px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 /* form parts */
@@ -30,19 +30,18 @@
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./../images/carrusel5.jpg") center no-repeat;
   background-size: cover;
-  filter: blur(3px);
-
+  border-radius: 8px;
+  filter: blur(1px);
   display: none;
 }
 
 .formTitle {
-  font-size: var(--h3-font-size);
   margin-bottom: 5px;
 }
 
 .formSubtitle {
-  font-size: var(--h4-font-size);
-  color: var(--light-font-color);
+  color: rgb(85, 82, 82);
+  font-size: 18px;
 }
 
 .formControls {
@@ -50,9 +49,9 @@
 }
 
 .formSubmitBtn {
-  background-color: var(--primary-color);
-  padding: 7px 25px;
-  color: var(--bg-color);
+  background-color: rgb(24, 104, 131);
+  padding: 5px 20px;
+  color: white;
   border-radius: 4px;
   margin-top: 40px;
 }
