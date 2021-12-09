@@ -10,7 +10,7 @@ import Signup from "./pages/Signup";
 import Admin from "./pages/Admin.jsx";
 //Especialidades
 import Especialidades from "./pages/especialidades/Especialidades.jsx";
-import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
+import AgregarEsp from "./pages/especialidades/Especialidades/AgregarEsp.jsx";
 import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";

@@ -1,16 +1,7 @@
 //---------
 import React from "react";
 
-<<<<<<< HEAD
-const Signup = () => {
-   return (
-      <div>
-      </div>
-   )
-}
-=======
 import styles from "./../styles/Signup.module.css";
->>>>>>> rodrigo3
 
 import FormInput from "./Form-input";
 

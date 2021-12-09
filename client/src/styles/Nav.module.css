@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-.fondo {
-  background-image: url("../images/header.png");
-  min-height: 100px;
-=======
 * {
   padding: 0;
   margin: 0;
@@ -10,27 +5,10 @@
 .fondo {
   background-image: url("../images/header.png");
   min-height: 160px;
->>>>>>> rodrigo3
   height: auto;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-<<<<<<< HEAD
-  z-index: 100;
-}
-
-@media screen and (min-width: 1024px) {
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 468px) {
-}
-@media screen and (min-width: 365px) {
-  .fondo {
-    background-size: 150%;
-  }
-}
-=======
 }
 
 .logo {
@@ -107,4 +85,3 @@
     width: 70px;
   }
 }
->>>>>>> rodrigo3
