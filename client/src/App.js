@@ -20,6 +20,7 @@ import EditarMed from "./pages/medicos/EditarMed.jsx";
 import Usuarios from "./pages/usuarios/Usuarios.jsx";
 import AgregarUsr from "./pages/usuarios/AgregarUsr.jsx";
 import EditarUsr from "./pages/usuarios/EditarUsr.jsx";
+import CambiarPass from "./pages/usuarios/CambiarPass.jsx";
 //Administradores
 import Administradores from "./pages/administradores/Administradores.jsx";
 import AgregarAdm from "./pages/administradores/AgregarAdm.jsx";
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="usuarios/agregar" element={<AgregarUsr />} />
         <Route path="usuarios/editar/:_id" element={<EditarUsr />} />
+        <Route path="usuarios/cambiar-password" element={<CambiarPass />} />
         <Route path="administradores" element={<Administradores />} />
         <Route path="administradores/agregar" element={<AgregarAdm />} />
         <Route path="administradores/editar" element={<EditarAdm />} />

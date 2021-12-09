@@ -167,7 +167,7 @@
   background-color: rgb(20, 30, 50);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .titulo {
     font-size: 2rem;
   }
@@ -198,5 +198,17 @@
   }
   .grande {
     height: 27rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .grande {
+    height: 20rem;
+  }
+  .card .extraShow {
+    height: 12rem;
+  }
+  .maxdata .maxname {
+    width: 100%;
+    font-size: 0.3rem;
   }
 }
