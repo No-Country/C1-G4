@@ -44,8 +44,7 @@ function Nav() {
                 className="nav-link active"
                 href="# "
                 tabindex="-1"
-                aria-disabled="true"
-              >
+                aria-disabled="true">
                 Mas info
               </a>
             </li>

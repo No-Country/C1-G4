@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 .fondo {
   background-image: url("../images/header.png");
@@ -27,7 +28,7 @@
 }
 
 .navul li:hover {
-  background-color: rgb(61, 59, 59);
+  background-color: rgb(25, 30, 102);
   transition: 1.2s;
   border-radius: 8px;
 }
@@ -62,20 +63,26 @@
     font-size: 16px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .navul {
-    border-radius: 8px;
     position: absolute;
+    width: 15rem;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.452);
   }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width:767px) {
   .fondo {
     background-size: 100%;
   }
   .navul {
-    border-radius: 8px;
     position: absolute;
+    width: 15rem;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.452);
   }
   .navul a {
     font-size: 20px;
