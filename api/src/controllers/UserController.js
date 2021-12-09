@@ -49,12 +49,11 @@ export default {
     try {
       const reg = await models.User.findByIdAndUpdate(
         { _id: req.body._id },
-        { username: req.body.username },
-        { name: req.body.name },
-        { lastname: req.body.lastname },
-        { email: req.body.email },
-        { rol: req.body.rol },
-        { created_at: req.body.created_at }
+        { username: req.body.username,
+          name: req.body.name,
+          lastname: req.body.lastname,
+          email: req.body.email,
+          rol: req.body.rol }
       );
       res.status(200).json(reg);
     } catch (e) {

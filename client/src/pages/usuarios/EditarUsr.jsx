@@ -35,7 +35,8 @@ const EditarUsr = () => {
   };
   const agregarUsuario = (e) => {
     e.preventDefault();
-    axios.post("user/update", {
+    axios
+      .put("user/update", {
       _id,
       username,
       name,
