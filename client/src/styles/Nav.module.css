@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 .fondo {
   background-image: url("../images/header.png");
   min-height: 100px;
+=======
+* {
+  padding: 0;
+  margin: 0;
+}
+.fondo {
+  background-image: url("../images/header.png");
+  min-height: 160px;
+>>>>>>> rodrigo3
   height: auto;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+<<<<<<< HEAD
   z-index: 100;
 }
 
@@ -19,3 +30,81 @@
     background-size: 150%;
   }
 }
+=======
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.navul {
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.navul li {
+  color: white;
+  padding: 5px;
+}
+
+.navul li:hover {
+  background-color: rgb(61, 59, 59);
+  transition: 1.2s;
+  border-radius: 8px;
+}
+
+.navul li a {
+  color: rgb(49, 47, 47);
+  font-size: 22px;
+  padding: 8px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
+}
+
+.navul li a:hover {
+  color: rgb(234, 236, 240);
+}
+
+@media (min-width: 1024px) {
+  .navul {
+    border-radius: 8px;
+    display: flex;
+    margin-left: 45vw;
+  }
+  .container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .navul li {
+    color: white;
+  }
+  .navul li a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .navul {
+    border-radius: 8px;
+    position: absolute;
+  }
+}
+
+@media (min-width: 320px) {
+  .fondo {
+    background-size: 100%;
+  }
+  .navul {
+    border-radius: 8px;
+    position: absolute;
+  }
+  .navul a {
+    font-size: 20px;
+  }
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+}
+>>>>>>> rodrigo3
