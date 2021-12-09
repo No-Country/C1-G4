@@ -8,6 +8,8 @@ router.post("/add", userController.add);
 
 router.get("/list", userController.list);
 
+router.get("/query", userController.query);
+
 router.put("/update", userController.update);
 
 router.put("/activate", userController.activate);

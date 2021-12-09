@@ -35,10 +35,10 @@
   margin-top: 1em;
   margin-bottom: 1rem;
   width: 90vw;
-  min-height: 5rem;
+  height: 5rem;
   background-color: white;
   border-radius: 0.4rem;
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 .grande {
   height: 20rem;
@@ -130,7 +130,7 @@
 
 .card .extraShow {
   display: flex;
-  height: 10rem;
+  height: 14rem;
 }
 
 .contenedorBotones {

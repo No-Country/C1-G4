@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+//import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
@@ -25,20 +25,20 @@ import Administradores from "./pages/administradores/Administradores.jsx";
 import AgregarAdm from "./pages/administradores/AgregarAdm.jsx";
 import EditarAdm from "./pages/administradores/EditarAdm.jsx";
 
-import userActions from "./redux/actions/userActions";
+//import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import Card from "./components/Card/Card";
 
 const App = () => {
   // const user = useSelector((state) => state.auth.user);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (localStorage.getItem("token")) {
       dispatch(userActions.loginUserLS(localStorage.getItem("token")));
     }
-  }, []);
+  }, []);*/
 
   return (
     <BrowserRouter>
@@ -60,7 +60,7 @@ const App = () => {
         <Route path="medicos/editar/:_id" element={<EditarMed />} />
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="usuarios/agregar" element={<AgregarUsr />} />
-        <Route path="usuarios/editar" element={<EditarUsr />} />
+        <Route path="usuarios/editar/:_id" element={<EditarUsr />} />
         <Route path="administradores" element={<Administradores />} />
         <Route path="administradores/agregar" element={<AgregarAdm />} />
         <Route path="administradores/editar" element={<EditarAdm />} />

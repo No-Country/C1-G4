@@ -41,7 +41,7 @@
   transition: 0.3s ease;
 }
 .grande {
-  height: 20rem;
+  height: 28rem;
 }
 
 .data {
@@ -131,7 +131,7 @@
 
 .card .extraShow {
   display: flex;
-  height: 13rem;
+  height: 18rem;
 }
 
 .contenedorBotones {

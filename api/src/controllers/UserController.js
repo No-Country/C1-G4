@@ -26,6 +26,25 @@ export default {
       next(e);
     }
   },
+  query: async (req, res, next) => {
+    try {
+      const reg = await models.User.findById(
+        { _id: req.query._id }
+      );
+      if (!reg) {
+        res.status(404).send({
+          message: "Usuario no encontrado"
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Error al intentar buscar un usuario"
+      });
+      next(e);
+    }
+  },
   update: async (req, res, next) => {
     try {
       const reg = await models.User.findByIdAndUpdate(
