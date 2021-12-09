@@ -3,8 +3,6 @@ import React from "react";
 
 import styles from "./../styles/Signup.module.css";
 
-import FormInput from "./Form-input";
-
 const SignUpForm = () => (
   <main className={styles.container}>
     <div className={styles.formContainer}>
@@ -15,11 +13,47 @@ const SignUpForm = () => (
         <h3 className={styles.formSubtitle}>Introduzca sus datos abajo</h3>
 
         <div className={styles.formControls}>
-          <FormInput labelText="nombre" inputType="text" />
-          <FormInput labelText="email" inputType="email" />
-          <FormInput labelText="contraseña" inputType="password" />
-
-          <button className={styles.formSubmitBtn}>Registrar</button>
+          <input
+            className={styles.formInput}
+            name="usuario"
+            type="tex"
+            placeholder="Usuario"
+          />
+          <input
+            className={styles.formInput}
+            name="nombre"
+            type="text"
+            placeholder="Nombre"
+          />
+          <input
+            className={styles.formInput}
+            name="apellido"
+            type="text"
+            placeholder="Apellido"
+          />
+          <input
+            className={styles.formInput}
+            name="email"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            className={styles.formInput}
+            name="password"
+            type="password"
+            placeholder="Password"
+          />
+          <input
+            className={styles.formInput}
+            name="repetir"
+            type="password"
+            placeholder="Repetir pasword"
+          />
+          <input
+            className={styles.formSubmitBtn}
+            type="submit"
+            value="Registrar"
+          />
         </div>
       </form>
     </div>

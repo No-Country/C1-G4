@@ -64,6 +64,19 @@
   transform: scale(0.9);
 }
 
+.formLabel {
+  display: block;
+  margin-top: 50px;
+}
+
+.formInput {
+  border: 0;
+  border-bottom: 1px solid grey;
+  display: block;
+  font-weight: 500;
+  width: 100%;
+  padding: 8px;
+}
 /* Media queries */
 
 @media screen and (min-width: 500px) {

@@ -27,7 +27,7 @@
 }
 
 .navul li:hover {
-  background-color: rgb(61, 59, 59);
+  background-color: rgb(25, 30, 102);
   transition: 1.2s;
   border-radius: 8px;
 }
@@ -47,7 +47,7 @@
 @media (min-width: 1024px) {
   .navul {
     border-radius: 8px;
-    display: flex;
+
     margin-left: 45vw;
   }
   .container {
@@ -74,7 +74,10 @@
     background-size: 100%;
   }
   .navul {
+    width: 15rem;
     border-radius: 8px;
+    z-index: 100;
+    background-color: rgba(182, 182, 182, 0.377);
     position: absolute;
   }
   .navul a {

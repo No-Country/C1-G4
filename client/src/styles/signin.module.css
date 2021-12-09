@@ -65,6 +65,19 @@
 .formSubmitBtn:active {
   transform: scale(0.9);
 }
+.formLabel {
+  display: block;
+  margin-top: 50px;
+}
+
+.formInput {
+  border: 0;
+  border-bottom: 1px solid grey;
+  display: block;
+  font-weight: 500;
+  width: 100%;
+  padding: 12px;
+}
 
 /* Media queries */
 

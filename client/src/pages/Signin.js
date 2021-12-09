@@ -11,12 +11,21 @@ const SigninForm = () => (
 
       <form className={styles.form}>
         <h1 className={styles.formTitle}>Iniciar Sesión</h1>
-        <h4 className={styles.formSubtitle}>Introduzca sus datos abajo</h4>
+        <h3 className={styles.formSubtitle}>Introduzca sus datos abajo</h3>
 
         <div className={styles.formControls}>
-          <FormInput labelText="email" inputType="email" />
-          <FormInput labelText="contraseña" inputType="password" />
-
+          <input
+            className={styles.formInput}
+            name="email"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            className={styles.formInput}
+            name="password"
+            type="password"
+            placeholder="Password"
+          />
           <button className={styles.formSubmitBtn}>Ingresar</button>
         </div>
       </form>
