@@ -10,7 +10,7 @@ import Signup from "./pages/Signup";
 import Admin from "./pages/Admin.jsx";
 //Especialidades
 import Especialidades from "./pages/especialidades/Especialidades.jsx";
-import AgregarEsp from "./pages/especialidades/Especialidades/AgregarEsp.jsx";
+import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
 import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";
@@ -29,7 +29,7 @@ import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import Card from "./components/Card/Card";
-import Cita from "./components/Cita/Cita"
+import Cita from "./components/Cita/Cita.jsx"
 
 const App = () => {
   // const user = useSelector((state) => state.auth.user);

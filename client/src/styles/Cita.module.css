@@ -1,30 +1,32 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.Cita{
-    display: grid;
-    text-align: center;
+.Cita {
+  display: grid;
+  text-align: center;
 }
-.calendar{
-    margin: 5% 10% 5% ;
-    align-items: center;
-    text-align: center;
-}
-
-button{
-    margin: 1px;
-    border: 0;
-    border-radius: 10% 10% 10% 10%;
+.calendar {
+  display: flex;
+  justify-content: center;
+  margin: 5% 10% 5%;
+  align-items: center;
+  text-align: center;
 }
 
-
-abbr{
-text-align: center;
+button {
+  margin: 1px;
+  border: 0;
+  border-radius: 10% 10% 10% 10%;
 }
 
-input{
-    margin: 2%;
+abbr {
+  text-align: center;
 }
+
+input {
+  margin: 2%;
+}
+
