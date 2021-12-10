@@ -7,7 +7,7 @@ function Card() {
   return (
     <Fragment>
       <div className={styles.container}>
-        <Link to="#" className={styles.btn}>
+        <Link to="/cita" className={styles.btn}>
           <div className={styles.boton}>
             <h4>Turnos Disponibles</h4>
             <img src={logo} alt="" />

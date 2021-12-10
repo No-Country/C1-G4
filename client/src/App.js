@@ -29,6 +29,7 @@ import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import Card from "./components/Card/Card";
+import Cita from "./components/Cita/Cita"
 
 const App = () => {
   // const user = useSelector((state) => state.auth.user);
@@ -65,6 +66,7 @@ const App = () => {
         <Route path="administradores" element={<Administradores />} />
         <Route path="administradores/agregar" element={<AgregarAdm />} />
         <Route path="administradores/editar" element={<EditarAdm />} />
+        <Route path="cita" element={<Cita />} />
       </Routes>
       <Footer />
     </BrowserRouter>

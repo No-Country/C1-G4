@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.especialidad{
+
+}
+.calendar{
+    margin: 5% 10% 5% ;
+    align-items: center;
+    text-align: center;
+}
+
+button{
+    margin: 1px;
+    border: 0;
+    border-radius: 10% 10% 10% 10%;
+}
+
+
+abbr{
+text-align: center;
+}
+/* button{
+    border-radius: 1rem;
+    border: 0.1px solid rgb(128, 185, 178);
+} */
