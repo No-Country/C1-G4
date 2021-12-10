@@ -1,7 +1,4 @@
 import React from "react";
-
-import FormInput from "./Form-input";
-
 import styles from "./../styles/signin.module.css";
 
 const SigninForm = () => (
