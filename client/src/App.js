@@ -5,8 +5,8 @@ import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
+import Signin from "./pages/Signin.jsx";
+import Signup from "./pages/Signup.jsx";
 import Admin from "./pages/Admin.jsx";
 //Especialidades
 import Especialidades from "./pages/especialidades/Especialidades.jsx";
