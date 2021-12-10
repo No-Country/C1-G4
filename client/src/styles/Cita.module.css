@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0;
 }
-.especialidad{
 
+.Cita{
+    display: grid;
+    text-align: center;
 }
 .calendar{
     margin: 5% 10% 5% ;
@@ -22,7 +24,7 @@ button{
 abbr{
 text-align: center;
 }
-/* button{
-    border-radius: 1rem;
-    border: 0.1px solid rgb(128, 185, 178);
-} */
+
+input{
+    margin: 2%;
+}
