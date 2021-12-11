@@ -3,15 +3,6 @@
   margin: 0;
 }
 
-/*.hamburg {
-  height: 24px;
-  width: 24px;
-  background-color: rgb(32, 34, 34);
-  border-style: solid;
-  border-color: rgb(252, 249, 248);
-  border-width: 1px;
-}*/
-
 .container {
   background-color: rgb(128, 185, 178);
   background-image: url("../images/header.png");

@@ -1,17 +1,17 @@
 import express from "express";
 import conexion from "./conexion";
-import enableCors from "./middlewares/cors";
 import router from "./routes/routes";
+import enableCors from "./middlewares/cors";
 
-//Puerto declarado en el entorno o puerto 3000
-const PORT = process.env.PORT || 3000;
+//Puerto declarado en el entorno o puerto 5000
+const PORT = process.env.PORT || 5000;
 
 conexion();
 
 const app = express();
 
-//Habilitar cors mediante middleware exportado desde el directorio "middlewares"
-enableCors( app );
+//Habilitar cors 
+enableCors(app);
 
 //Habilitar json, urlencoded y rutas de archivos estaticos
 app.use(express.json());
@@ -22,5 +22,5 @@ app.use(express.static(__dirname + "./../public"));
 app.use("/api", router);
 
 app.listen(PORT, () => {
-  console.log("Server on port", 3000);
+  console.log("Server on port", 5000);
 });

@@ -1,4 +1,4 @@
-.contenedorEspecialidades {
+.contenedorUsuarios {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -41,7 +41,7 @@
   transition: 0.3s ease;
 }
 .grande {
-  height: 15rem;
+  height: 28rem;
 }
 
 .data {
@@ -54,14 +54,14 @@
   width: 80%;
   height: 5rem;
 }
-
 .data .name {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: rgb(20, 50, 50);
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  width: 50%;
+  font-weight: 600;
 }
 
 .maxdata {
@@ -83,7 +83,6 @@
   width: 50%;
   font-weight: 600;
 }
-
 .opc {
   display: flex;
   justify-content: space-around;
@@ -132,10 +131,7 @@
 
 .card .extraShow {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 8rem;
+  height: 18rem;
 }
 
 .contenedorBotones {
@@ -171,7 +167,7 @@
   background-color: rgb(20, 30, 50);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .titulo {
     font-size: 2rem;
   }
@@ -183,6 +179,7 @@
     width: 50%;
   }
   .data .name {
+    width: 100%;
     font-size: 1.2rem;
   }
   .opc {
@@ -191,8 +188,27 @@
   .icono {
     transform: scale(1.5);
   }
+
   .maxdata .maxname {
     width: 100%;
     font-size: 1rem;
+  }
+  .card .extraShow {
+    height: 20rem;
+  }
+  .grande {
+    height: 27rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .grande {
+    height: 20rem;
+  }
+  .card .extraShow {
+    height: 12rem;
+  }
+  .maxdata .maxname {
+    width: 100%;
+    font-size: 0.8rem;
   }
 }

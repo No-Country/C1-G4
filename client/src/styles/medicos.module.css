@@ -1,4 +1,4 @@
-.contenedorEspecialidades {
+.contenedorMedicos {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -38,30 +38,29 @@
   height: 5rem;
   background-color: white;
   border-radius: 0.4rem;
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 .grande {
-  height: 15rem;
+  height: 20rem;
 }
 
 .data {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   padding-left: 1rem;
   padding-top: 1rem;
   align-items: center;
   width: 80%;
   height: 5rem;
 }
-
 .data .name {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: rgb(20, 50, 50);
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: 600;
 }
 
 .maxdata {
@@ -79,11 +78,10 @@
   justify-content: flex-start;
   align-items: center;
   color: rgb(20, 50, 50);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 50%;
   font-weight: 600;
 }
-
 .opc {
   display: flex;
   justify-content: space-around;
@@ -132,10 +130,7 @@
 
 .card .extraShow {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 8rem;
+  height: 14rem;
 }
 
 .contenedorBotones {
@@ -171,7 +166,7 @@
   background-color: rgb(20, 30, 50);
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .titulo {
     font-size: 2rem;
   }
@@ -183,13 +178,25 @@
     width: 50%;
   }
   .data .name {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
   .opc {
     width: 50%;
   }
   .icono {
     transform: scale(1.5);
+  }
+  .maxdata .maxname {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 723px) {
+  .grande {
+    height: 20rem;
+  }
+  .card .extraShow {
+    height: 12rem;
   }
   .maxdata .maxname {
     width: 100%;

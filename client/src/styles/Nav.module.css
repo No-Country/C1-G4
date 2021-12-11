@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.fondo {
+  background-image: url("../images/header.png");
+  min-height: 160px;
+  height: auto;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.navul {
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.navul li {
+  color: white;
+}
+
+.navul li:hover {
+  background-color: rgb(25, 30, 102);
+  transition: 1.2s;
+  border-radius: 8px;
+}
+
+.navul li a {
+  color: rgb(49, 47, 47);
+  font-size: 22px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
+}
+
+.navul li a:hover {
+  color: rgb(234, 236, 240);
+}
+
+@media (min-width: 1024px) {
+  .navul {
+    text-align: center;
+    border-radius: 8px;
+
+    margin-left: 45vw;
+  }
+  .container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .navul li {
+    color: white;
+  }
+  .navul li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navul {
+    text-align: center;
+    position: absolute;
+    width: 15rem;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.452);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .fondo {
+    background-size: 100%;
+  }
+  .navul {
+    position: absolute;
+    text-align: center;
+    width: 15rem;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.452);
+  }
+  .navul a {
+    font-size: 20px;
+  }
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media (min-width: 150px) and (max-width: 319px) {
+  .navul {
+    position: absolute;
+    width: 15rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.452);
+  }
+}

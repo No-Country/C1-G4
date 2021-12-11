@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Cita {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgba(180, 220, 200, 0.9);
+}
+.calendar {
+  display: flex;
+  justify-content: center;
+  margin: 5% 10% 5%;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo {
+  margin-top: 2rem;
+}
+
+.select {
+  margin-top: 1rem;
+  width: 18rem;
+  height: 2.6rem;
+}
+
+.btn {
+  align-self: center;
+  width: 12rem;
+  height: 2.4rem;
+}
+
+button {
+  margin: 1px;
+  border: 0;
+  border-radius: 10% 10% 10% 10%;
+}
+
+abbr {
+  text-align: center;
+}
+
+input {
+  margin: 2%;
+}
+
+option {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

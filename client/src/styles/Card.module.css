@@ -1,69 +1,34 @@
+/* CSS Global */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background: #dfe2df;
-  font-family: "open sans";
-}
-
-.contenedor {
-  width: 100%;
-  max-width: 300px;
-  margin: auto;
-  height: 100vh;
+/* DIVS */
+.container {
+  background-color: rgb(214, 214, 214);
   display: flex;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
-
-.tabla {
-  width: 120px;
-  height: 130px;
-  margin: auto;
-  border: 2px solid rgb(128, 185, 178);
-  border-radius: 4px;
-  box-shadow: 1px 1px 4px 2px #1d1e25;
-  padding: 5px;
-  text-align: center;
-  flex-grow: 1;
-  color: #343759;
-}
-
-.tabla > h2 {
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
-img {
-  width: 50px;
-  margin-bottom: 1px;
-}
-
-.tabla > p {
-  display: block;
-  margin-bottom: 3px;
-  font-size: 12px;
-}
-
 .boton {
-  display: inline-block;
-  width: 50px;
-  padding: 2px;
-  background: #2d63a1;
-  text-decoration: none;
-  color: #f8f8fa;
-  border-radius: 15px;
+  width: 14rem;
+  height: 10rem;
+  margin: 1%;
+  border: 0.2rem solid rgb(128, 185, 178);
+  border-radius: 5%;
+  box-shadow: 1px 1px 1px 1px #1d1e25d0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  margin: auto;
+  align-items: center;
 }
 
-.tabla:hover {
+.boton:hover {
   background: #343759;
   color: #f1f1f2;
   transition: 0.8s all;
@@ -71,35 +36,43 @@ img {
   cursor: pointer;
 }
 
-.boton:hover {
-  color: #2d63a1;
-  background-color: white;
+/* Elementos */
+img {
+  width: 25%;
+}
+a {
+  margin: 5%;
 }
 
-/*
-@media screen and (max-width: 1000px) {
-  .tabla {
-    width: 45%;
-    max-width: none;
-    margin-bottom: 40px;
-    flex-grow: initial;
+@media screen and (min-width: 1025px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+@media (min-width: 366px) and (max-width: 767px) {
+  .container {
+    background-color: rgb(214, 214, 214);
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+@media (min-width: 160px) and (max-width: 365px) {
+  .fondo {
+    background-size: 150%;
+  }
+  .container {
+    background-color: rgb(214, 214, 214);
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .boton:hover {
+    background: #343759;
+    color: #f1f1f2;
+    transition: 0.5s;
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
-@media screen and (max-width: 700px) {
-  .tabla {
-    width: 45%;
-    padding: 30px;
-  }
-  .tabla > h2 {
-    margin-top: 40px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .tabla {
-    width: 85%;
-    padding: 20px;
-  }
-}
-*/

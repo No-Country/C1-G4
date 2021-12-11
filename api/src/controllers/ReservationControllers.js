@@ -5,7 +5,7 @@ export default {
   createReservation: async (req, res, next) => {
     try {
       const reservation = await models.Reservation.create(req.body);
-      res.status(200).json({ reservation });
+      res.status(200).json(reservation);
     } catch (e) {
       
       res.status(500).send({
