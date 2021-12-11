@@ -8,6 +8,7 @@
     display: grid;
     text-align: center;
 }
+
 .calendar{
     margin: 5% 10% 5% ;
     align-items: center;
@@ -22,7 +23,7 @@ button{
 
 
 abbr{
-text-align: center;
+    /* text-align: center; */
 }
 
 input{
