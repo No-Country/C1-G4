@@ -24,7 +24,7 @@ const SigninForm = () => {
         password,
       })
       .then((res) => {
-        console.log("logueado exitosamente", res);
+        alert("logueado exitosamente", res);
         guardarError(false);
       })
       .catch((e) => {
@@ -58,8 +58,7 @@ const SigninForm = () => {
               onChange={actualizarLogin}
             />
             {error ? (
-              <p className={styles.error}> Error al intentar loguearse <br/>
-              { mensaje }
+              <p className={styles.error}> Correo y/o password invalido/s
               </p>
             ) : null}
             <button className={styles.formSubmitBtn}>Ingresar</button>

@@ -62,7 +62,7 @@ const SignUpForm = () => {
         rol: "patient",
       })
       .then((res) => {
-        console.log(res);
+        alert("resgistrado exitosamente", res.data.name);
         limpiarCampos();
       })
       .catch(error => {

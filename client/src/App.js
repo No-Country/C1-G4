@@ -1,7 +1,6 @@
 import React from "react";
 //import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
@@ -30,6 +29,7 @@ import EditarAdm from "./pages/administradores/EditarAdm.jsx";
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import Card from "./components/Card/Card";
+import Cita from "./components/Cita/Cita.jsx";
 
 const App = () => {
   // const user = useSelector((state) => state.auth.user);
@@ -45,8 +45,6 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Carousel />
-      <Body />
-      <Card />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="signin" element={<Signin />} />
@@ -55,7 +53,6 @@ const App = () => {
         <Route path="especialidades" element={<Especialidades />} />
         <Route path="especialidades/agregar" element={<AgregarEsp />} />
         <Route path="especialidades/editar/:_id" element={<EditarEsp />} />
-        <Route path="especialidades/editar" element={<EditarEsp />} />
         <Route path="medicos" element={<Medicos />} />
         <Route path="medicos/agregar" element={<AgregarMed />} />
         <Route path="medicos/editar/:_id" element={<EditarMed />} />
@@ -66,7 +63,10 @@ const App = () => {
         <Route path="administradores" element={<Administradores />} />
         <Route path="administradores/agregar" element={<AgregarAdm />} />
         <Route path="administradores/editar" element={<EditarAdm />} />
+        <Route path="cita" element={<Cita />} />
       </Routes>
+      <Card />
+      <Routes></Routes>
       <Footer />
     </BrowserRouter>
   );

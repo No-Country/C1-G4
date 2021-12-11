@@ -7,23 +7,23 @@ function Card() {
   return (
     <Fragment>
       <div className={styles.container}>
-        <Link to="#" className={styles.btn}>
+        <Link to="/cita" className={styles.btn}>
           <div className={styles.boton}>
-            <h4>Turnos Disponibles</h4>
+            <h4>Pida Una Cita</h4>
             <img src={logo} alt="" />
             <p>Ingresa aqui</p>
           </div>
         </Link>
-        <Link to="#" className={styles.btn}>
+        <Link to="/medicos" className={styles.btn}>
           <div className={styles.boton}>
-            <h4>Historial Clinico</h4>
+            <h4>Equipo de Medicos</h4>
             <img src={logo} alt="" />
             <p>Ingresa aqui</p>
           </div>
         </Link>
         <Link to="/especialidades" className={styles.btn}>
           <div className={styles.boton}>
-            <h4>Cartilla Médicos</h4>
+            <h4>Especialidades disponibles</h4>
             <img src={logo} alt="" />
             <p>Ingresa aqui</p>
           </div>

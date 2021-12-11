@@ -7,6 +7,8 @@ router.post("/add", medicController.add);
 
 router.get("/query", medicController.query);
 
+router.get("/query-by-speciality", medicController.queryBySpeciality);
+
 router.get("/list", medicController.list);
 
 router.put("/update", medicController.update);

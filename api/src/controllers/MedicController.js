@@ -14,8 +14,7 @@ export default {
   },
   list: async (req, res, next) => {
     try {
-      const reg = await models.Medic.find()
-        .populate("speciality", { name: 1 });
+      const reg = await models.Medic.find().populate("speciality", { name: 1 });
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -41,6 +40,24 @@ export default {
       next(e);
     }
   },
+  queryBySpeciality: async (req, res, next) => {
+    try {
+      console.log(req.query.speciality);
+      const reg = await models.Speciality.find({ _id: req.query.speciality}).populate("name");
+      if (!reg) {
+        res.status(404).send({
+          message: "Medico no encontrado",
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrio un error al intentar buscar medico",
+      });
+      next(e);
+    }
+  },
   update: async (req, res, next) => {
     try {
       const reg = await models.Medic.findByIdAndUpdate(
@@ -52,7 +69,7 @@ export default {
           lastname: req.body.lastname,
           email: req.body.email,
           phone: req.body.phone,
-          speciality: req.body.speciality
+          speciality: req.body.speciality,
         }
       );
       res.status(200).json(reg);
