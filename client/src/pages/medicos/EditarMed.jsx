@@ -1,6 +1,6 @@
 import styles from "./../../styles/agregar.module.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const EditarMed = () => {
@@ -18,7 +18,7 @@ const EditarMed = () => {
   const [error, guardarError] = useState(false);
   //Destructuramos las propiedades del medico
   const { name, lastname, email, phone, speciality } = medico;
-  const cargarMedicoPorId = async () => {
+  const cargarMedicoPorId = useCallback(async () => {
     axios
       .get("medic/query?_id=" + _id)
       .then((res) => {
@@ -27,8 +27,8 @@ const EditarMed = () => {
         console.log("cargado");
       })
       .catch(console.log);
-  };
-  const listarEspecialidades = async () => {
+  }, []);
+  const listarEspecialidades = useCallback(async () => {
     axios
       .get("speciality/list")
       .then((res) => {
@@ -36,7 +36,7 @@ const EditarMed = () => {
         guardarEspecialidades(data);
       })
       .catch(console.log);
-  };
+  }, []);
 
   useEffect(() => {
     cargarMedicoPorId();

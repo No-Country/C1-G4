@@ -1,6 +1,6 @@
 import styles from "./../../styles/agregar.module.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const EditarEsp = () => {
@@ -13,7 +13,7 @@ const EditarEsp = () => {
   });
   const [error, guardarError] = useState(false);
   //Funcion para cargar los campos de cada input
-  const cargarEspecialidadPorId = async () => {
+  const cargarEspecialidadPorId = useCallback(async () => {
     axios
       .get("speciality/get?_id=" + _id)
       .then((res) => {
@@ -22,10 +22,7 @@ const EditarEsp = () => {
         console.log("cargado");
       })
       .catch(console.log);
-  };
-  useEffect(() => {
-    cargarEspecialidadPorId();
-  }, [cargarEspecialidadPorId]);
+  }, []);
 
   //Funcion que se ejecuta al escribir en el input
   const actualizarEspecialidad = (e) => {
@@ -51,20 +48,23 @@ const EditarEsp = () => {
     axios
       .put("speciality/update", {
         _id,
-        name
+        name,
       })
-      .then(res => {
+      .then((res) => {
         alert("Especialidad modificada exitosamente");
         //redireccionamos a la lista
         navigate("/especialidades", res);
       })
       .catch(console.log);
   };
+  useEffect(() => {
+    cargarEspecialidadPorId();
+  }, [cargarEspecialidadPorId]);
 
   return (
     <div className={styles.contenedorAgregar}>
       <h2 className={styles.titulo}> Editar especialidad </h2>
-     
+
       <form onSubmit={editarEspecialidad} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.label}> Nombre de la especialidad</label>
@@ -75,9 +75,9 @@ const EditarEsp = () => {
             className={styles.input}
           />
         </div>
- {error ? (
-        <p className={styles.error}> Todos los campos son obligatorios </p>
-      ) : null}
+        {error ? (
+          <p className={styles.error}> Todos los campos son obligatorios </p>
+        ) : null}
         <div className={styles.formGroup}>
           <button type="submit" className={styles.button}>
             {" "}

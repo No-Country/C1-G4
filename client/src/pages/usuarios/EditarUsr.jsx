@@ -1,6 +1,6 @@
 import styles from "./../../styles/agregar.module.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const EditarUsr = () => {
@@ -18,14 +18,14 @@ const EditarUsr = () => {
   //extraemos el parametro _id
   const { _id } = useParams();
   // funcion para consultar usuario
-  const consultarUsuario = async () => {
+  const consultarUsuario = useCallback(async () => {
     axios
       .get("user/query?_id=" + _id)
       .then(({ data }) => {
         guardarUsuario(data);
       })
       .catch(console.log);
-  };
+  }, []);
   //funcion que se ejecuta al escribir en un input
   const actualizarUsuario = (e) => {
     guardarUsuario({
