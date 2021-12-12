@@ -33,7 +33,7 @@ const EditarUsr = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const agregarUsuario = (e) => {
+  const agregarUsuario = async(e) => {
     e.preventDefault();
     axios
       .put("user/update", {
@@ -49,7 +49,7 @@ const EditarUsr = () => {
   };
   useEffect(() => {
     consultarUsuario();
-  }, []);
+  }, [consultarUsuario]);
 
   return (
     <div className={styles.contenedorAgregar}>

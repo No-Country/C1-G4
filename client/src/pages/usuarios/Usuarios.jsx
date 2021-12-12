@@ -1,9 +1,12 @@
 import styles from "./../../styles/usuarios.module.css";
 import Card from "./CardUsr.jsx";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useUser from "./../../hooks/useUser";
 import axios from "axios";
 const Usuarios = () => {
+  const navigate = useNavigate();
+  const { isLogged, isAdmin } = useUser();
   const [usuarios, guardarUsuarios] = useState([
     {
       _id: "cargando",
@@ -24,8 +27,11 @@ const Usuarios = () => {
       .catch(console.log);
   };
   useEffect(() => {
+    if (!isLogged() || !isAdmin()){
+      navigate("/");
+    }
     listarUsuarios();
-  }, []);
+  }, [listarUsuarios, isLogged, isAdmin, navigate]);
 
   return (
     <div className={styles.contenedorUsuarios}>

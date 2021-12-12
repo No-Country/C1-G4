@@ -1,5 +1,4 @@
-import React from "react";
-//import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
@@ -31,44 +30,46 @@ import Carousel from "./components/Carousel/Carousel";
 import Card from "./components/Card/Card";
 import Cita from "./components/Cita/Cita.jsx";
 
-const App = () => {
-  // const user = useSelector((state) => state.auth.user);
-  // const dispatch = useDispatch();
+//importamos contexto
+import { UsuarioContextProvider } from "./context/userContext";
 
-  /*useEffect(() => {
-    if (localStorage.getItem("token")) {
-      dispatch(userActions.loginUserLS(localStorage.getItem("token")));
-    }
-  }, []);*/
+//hooks
+
+const App = () => {
+
+  useEffect(() => {
+  }, []);
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Carousel />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="signin" element={<Signin />} />
-        <Route path="signup" element={<Signup />} />
-        <Route path="admin" element={<Admin />} />
-        <Route path="especialidades" element={<Especialidades />} />
-        <Route path="especialidades/agregar" element={<AgregarEsp />} />
-        <Route path="especialidades/editar/:_id" element={<EditarEsp />} />
-        <Route path="medicos" element={<Medicos />} />
-        <Route path="medicos/agregar" element={<AgregarMed />} />
-        <Route path="medicos/editar/:_id" element={<EditarMed />} />
-        <Route path="usuarios" element={<Usuarios />} />
-        <Route path="usuarios/agregar" element={<AgregarUsr />} />
-        <Route path="usuarios/editar/:_id" element={<EditarUsr />} />
-        <Route path="usuarios/cambiar-password" element={<CambiarPass />} />
-        <Route path="administradores" element={<Administradores />} />
-        <Route path="administradores/agregar" element={<AgregarAdm />} />
-        <Route path="administradores/editar" element={<EditarAdm />} />
-        <Route path="cita" element={<Cita />} />
-      </Routes>
-      <Card />
-      <Routes></Routes>
-      <Footer />
-    </BrowserRouter>
+    <UsuarioContextProvider>
+      <BrowserRouter>
+        <Header /> 
+        <Carousel />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="signin" element={<Signin />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="especialidades" element={<Especialidades />} />
+          <Route path="especialidades/agregar" element={<AgregarEsp />} />
+          <Route path="especialidades/editar/:_id" element={<EditarEsp />} />
+          <Route path="medicos" element={<Medicos />} />
+          <Route path="medicos/agregar" element={<AgregarMed />} />
+          <Route path="medicos/editar/:_id" element={<EditarMed />} />
+          <Route path="usuarios" element={<Usuarios />} />
+          <Route path="usuarios/agregar" element={<AgregarUsr />} />
+          <Route path="usuarios/editar/:_id" element={<EditarUsr />} />
+          <Route path="usuarios/cambiar-password" element={<CambiarPass />} />
+          <Route path="administradores" element={<Administradores />} />
+          <Route path="administradores/agregar" element={<AgregarAdm />} />
+          <Route path="administradores/editar" element={<EditarAdm />} />
+          <Route path="cita" element={<Cita />} />
+        </Routes>
+        <Card />
+        <Routes></Routes>
+        <Footer />
+      </BrowserRouter>
+    </UsuarioContextProvider>
   );
 };
 
