@@ -47,14 +47,16 @@
 .data {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding-left: 1rem;
   padding-top: 1rem;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 5rem;
 }
 
 .data .name {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -178,13 +180,13 @@
     font-size: 1rem;
   }
   .data {
-    width: 45%;
+    width: 50%;
   }
   .data .name {
     font-size: 1.2rem;
   }
   .opc {
-    width: 55%;
+    width: 50%;
   }
   .icono {
     transform: scale(1.5);

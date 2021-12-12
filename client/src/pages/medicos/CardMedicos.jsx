@@ -46,7 +46,7 @@ const CardMedicos = ({ medico, listarMedicos }) => {
   return (
     <div className={mostrar ? styles.card + " " + styles.grande : styles.card}>
       <div className={styles.data}>
-        <p className={styles.name}> {name + " " + lastname} </p>
+        <p className={styles.name}> {name + " " + lastname} { state === 0 ? "(Inactivo)" : null } </p>
       </div>
       <div className={styles.opc}>
         <svg

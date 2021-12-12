@@ -49,7 +49,7 @@
   .navul {
     text-align: center;
     border-radius: 8px;
-    display: flex;
+
     margin-left: 45vw;
   }
   .container {
@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width:767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .fondo {
     background-size: 100%;
   }
@@ -102,6 +102,5 @@
     width: 15rem;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.452);
-
   }
 }

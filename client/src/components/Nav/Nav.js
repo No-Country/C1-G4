@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import estilo from "../../styles/Header.module.css";
 import styles from "../../styles/Nav.module.css";
 import logo from "../../images/medic.svg";
@@ -44,7 +43,8 @@ function Nav() {
                 className="nav-link active"
                 href="# "
                 tabindex="-1"
-                aria-disabled="true">
+                aria-disabled="true"
+              >
                 Mas info
               </a>
             </li>

@@ -1,54 +1,35 @@
-import mongoose, { Schema, SchemaTypes } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const reservationSchema = new Schema({
-    title: {
-      type:String,
-      maxlength: 100,
-      required: true
-    },
-
+const reservationSchema = new Schema({ 
     create_at: {
       type: Date,
       default: Date.now
     },
-    
     date: {
       type: Date,
-      default: Date
+      required: true
     },
-
-    status: {
+    state: {
       type:Number,
       default:1 
     },
-    
     price: {
-      type:Number, 
-      default:0
+      type:Number
     },
-
     user: {
-      type:Schema.Types.ObjectId,
-      ref:'User',
+      type: Schema.ObjectId,
+      ref:'user',
       required:true
+    },    
+    medic: {
+      type: Schema.ObjectId,
+      ref: 'medic',
+      required: true
     },
-    
-    id_medic: {
-      type:Schema.Types.ObjectId,
-      ref:'Medic',
-      required:true
-    },
-    
-    id_patient: {
-      type:Schema.Types.ObjectId,
-      ref:'Patient',
-      required:true
-    },
-
     paymethod: {
       type:Number
     }
- })
+ });
 
  const Reservation = mongoose.model('reservation', reservationSchema)
 

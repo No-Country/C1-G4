@@ -9,8 +9,8 @@ import axios from "axios";
 
 const globalStore = createStore(mainReducer, applyMiddleware(thunk));
 
-axios.defaults.baseURL = "https://citas-medicas-04.herokuapp.com/api/";
-
+axios.defaults.baseURL = "http://localhost:5000/api/";
+//https://citas-medicas-04.herokuapp.com/api/
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={globalStore}>

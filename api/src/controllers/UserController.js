@@ -26,16 +26,34 @@ export default {
       next(e);
     }
   },
+  query: async (req, res, next) => {
+    try {
+      const reg = await models.User.findById({ _id: req.query._id });
+      if (!reg) {
+        res.status(404).send({
+          message: "Usuario no encontrado",
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Error al intentar buscar un usuario",
+      });
+      next(e);
+    }
+  },
   update: async (req, res, next) => {
     try {
       const reg = await models.User.findByIdAndUpdate(
         { _id: req.body._id },
-        { username: req.body.username },
-        { name: req.body.name },
-        { lastname: req.body.lastname },
-        { email: req.body.email },
-        { rol: req.body.rol },
-        { created_at: req.body.created_at }
+        {
+          username: req.body.username,
+          name: req.body.name,
+          lastname: req.body.lastname,
+          email: req.body.email,
+          rol: req.body.rol,
+        }
       );
       res.status(200).json(reg);
     } catch (e) {
@@ -46,7 +64,30 @@ export default {
     }
   },
   changePassword: async (req, res, next) => {
-    //TODO metodo para cambiar de contraseña
+    if (
+      req.body.password !== "" &&
+      req.body.repetir !== "" &&
+      req.body.password === req.body.repetir
+    ) {
+      req.body.password = await bcrypt.hash(req.body.password, 10);
+      try {
+        const reg = await models.User.findByIdAndUpdate(
+          { _id: req.body._id },
+          { password: req.body.password }
+        );
+        res.status(200).json(reg);
+      } catch (e) {
+        res.status(500).send({
+          message: "Error al intentar cambiar password",
+        });
+        next(e);
+      }
+    } else {
+      res.status(500).send({
+        message: "Error",
+      });
+      next(e);
+    }
   },
   activate: async (req, res, next) => {
     try {

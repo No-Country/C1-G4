@@ -35,10 +35,10 @@
   margin-top: 1em;
   margin-bottom: 1rem;
   width: 90vw;
-  min-height: 5rem;
+  height: 5rem;
   background-color: white;
   border-radius: 0.4rem;
-  transition: 0.3s ease;
+  transition: 0.7s ease;
 }
 .grande {
   height: 20rem;
@@ -47,7 +47,6 @@
 .data {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   padding-left: 1rem;
   padding-top: 1rem;
   align-items: center;
@@ -131,7 +130,7 @@
 
 .card .extraShow {
   display: flex;
-  height: 10rem;
+  height: 14rem;
 }
 
 .contenedorBotones {
@@ -167,7 +166,7 @@
   background-color: rgb(20, 30, 50);
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .titulo {
     font-size: 2rem;
   }
@@ -194,10 +193,10 @@
 }
 @media (max-width: 723px) {
   .grande {
-    height: 34rem;
+    height: 20rem;
   }
   .card .extraShow {
-    height: 20rem;
+    height: 12rem;
   }
   .maxdata .maxname {
     width: 100%;
