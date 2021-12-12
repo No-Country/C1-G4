@@ -8,9 +8,9 @@ import Signin from "./pages/Signin.jsx";
 import Signup from "./pages/Signup.jsx";
 import Admin from "./pages/Admin.jsx";
 //Especialidades
-import Especialidades from "./pages/especialidades/Especialidades.jsx";
-import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
-import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
+import Especialidades from "./pages/Especialidades/Especialidades.jsx";
+import AgregarEsp from "./pages/Especialidades/AgregarEsp";
+import EditarEsp from "./pages/Especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";
 import AgregarMed from "./pages/medicos/AgregarMed.jsx";
