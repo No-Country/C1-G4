@@ -9,7 +9,12 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  min-height: 30rem;
   background-color: rgba(180, 220, 200, 0.9);
+}
+.formGrop {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .calendar {
   display: flex;
@@ -21,6 +26,14 @@
 
 .titulo {
   margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.links {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  color: rgba(20, 21, 80, 0.9);
+  text-decoration: underline;
 }
 
 .select {

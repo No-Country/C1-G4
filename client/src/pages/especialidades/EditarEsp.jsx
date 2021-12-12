@@ -25,7 +25,7 @@ const EditarEsp = () => {
   };
   useEffect(() => {
     cargarEspecialidadPorId();
-  }, []);
+  }, [cargarEspecialidadPorId]);
 
   //Funcion que se ejecuta al escribir en el input
   const actualizarEspecialidad = (e) => {

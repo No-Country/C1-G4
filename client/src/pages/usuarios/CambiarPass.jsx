@@ -18,7 +18,7 @@ const CambiarPass = () => {
 
   const efectuarCambio = (e) => {
     e.preventDefault();
-    if (password === "" || repetir == "") {
+    if (password === "" || repetir === "") {
       guardarError(true);
       return;
     }

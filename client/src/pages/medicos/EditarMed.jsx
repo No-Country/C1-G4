@@ -41,7 +41,7 @@ const EditarMed = () => {
   useEffect(() => {
     cargarMedicoPorId();
     listarEspecialidades();
-  }, []);
+  }, [cargarMedicoPorId, listarEspecialidades]);
   //Funcion que se ejecuta cada vez que un usuario escribe en un input
   const actualizarMedico = (e) => {
     guardarMedico({

@@ -3,8 +3,10 @@ import Card from "./Card.jsx";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import useUser from "./../../hooks/useUser";
 
 const Especialidades = () => {
+  const { isLogged, isAdmin } = useUser();
   const [especialidades, saveEspecialidades] = useState([
     {
       _id: "cargando",
@@ -24,7 +26,7 @@ const Especialidades = () => {
   };
   useEffect(() => {
     listarEspecialidades();
-  }, []);
+  }, [listarEspecialidades]);
 
   return (
     <div className={styles.contenedorEspecialidades}>
@@ -39,16 +41,25 @@ const Especialidades = () => {
             listarEspecialidades={listarEspecialidades}
           />
         ))}
-        <div className={styles.contenedorBotones}>
-          <Link to="/especialidades/agregar" className={styles.button}>
-            {" "}
-            Agregar{" "}
-          </Link>
-          <Link to="/admin" className={styles.button + " " + styles.volver}>
-            {" "}
-            Volver{" "}
-          </Link>
-        </div>
+        {isLogged() && isAdmin() ? (
+          <div className={styles.contenedorBotones}>
+            <Link to="/especialidades/agregar" className={styles.button}>
+              {" "}
+              Agregar{" "}
+            </Link>
+            <Link to="/admin" className={styles.button + " " + styles.volver}>
+              {" "}
+              Volver{" "}
+            </Link>
+          </div>
+        ) : (
+          <div className={styles.contenedorBotones}> 
+            <Link to="/" className={styles.button + " " + styles.volver}>
+              {" "}
+              Volver{" "}
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

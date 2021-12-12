@@ -1,18 +1,23 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./../styles/signin.module.css";
+import { useNavigate } from "react-router";
+import useUser from "./../hooks/useUser";
+import decode from "jwt-decode";
 
 const SigninForm = () => {
-  const [mensaje, guardarMensaje] = useState();
+  const navigate = useNavigate();
+  const [mensaje, guardarMensaje] = useState("");
   const [error, guardarError] = useState(false);
-  const [login, guardarLogin] = useState({
+  const [campos, guardarCampos] = useState({
     password: "",
     email: "",
   });
-  const { password, email } = login;
+  const { login, isLogged } = useUser();
+  const { password, email } = campos;
   const actualizarLogin = (e) => {
-    guardarLogin({
-      ...login,
+    guardarCampos({
+      ...campos,
       [e.target.name]: e.target.value,
     });
   };
@@ -25,7 +30,10 @@ const SigninForm = () => {
       })
       .then((res) => {
         alert("logueado exitosamente", res);
+        console.log(isLogged());
         guardarError(false);
+        login(res.data.tokenReturn);
+        //navigate("/");
       })
       .catch((e) => {
         console.error("outer", e.message);
@@ -33,6 +41,11 @@ const SigninForm = () => {
         guardarMensaje(e.message);
       });
   };
+  useEffect(()=>{
+    if (isLogged()){
+      navigate("/");
+    }
+  }, [isLogged, navigate]);
   return (
     <main className={styles.container}>
       <div className={styles.formContainer}>
