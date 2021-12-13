@@ -17,9 +17,9 @@ function Nav() {
   return (
     <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
       <div className={"container-fluid " + styles.container}>
-        <a className="navbar-brand" href="# ">
+        <Link className="navbar-brand" to="/">
           <img className={styles.logo} alt="" src={logo} />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -34,9 +34,9 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className={styles.navul}>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="# ">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             {isLogged() ? null : (
               <li className="nav-item">
@@ -83,7 +83,7 @@ function Nav() {
                   tabindex="-1"
                   aria-disabled="true"
                 >
-                  Panel de administracion
+                  Admin
                 </Link>
               </li>
             ) : null}

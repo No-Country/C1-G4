@@ -33,7 +33,9 @@ function Cita() {
       _id: "",
       name: "",
     },
-    medic: "",
+    medic: {
+      name: ""
+    },
   });
   const { speciality, medic } = cita;
 
@@ -66,7 +68,7 @@ function Cita() {
       })
       .then((res) => {
         console.log(res);
-        alert("cita creada exitosamente");
+        alert(`cita creada exitosamente, dia: ${fecha}`);
       })
       .catch(console.log);
   });

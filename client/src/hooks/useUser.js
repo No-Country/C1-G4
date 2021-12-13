@@ -45,11 +45,16 @@ export default function useUser() {
     }
   }, [jwt]);
 
+  const showUser = useCallback(()=>{
+    return jwt.name;
+  }, [jwt]);
+
   return {
     login,
     closeSession,
     isLogged,
     isAdmin,
     autoLogin,
+    showUser
   };
 }

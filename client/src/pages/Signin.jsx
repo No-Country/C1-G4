@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "./../styles/signin.module.css";
 import { useNavigate } from "react-router";
 import useUser from "./../hooks/useUser";
-import decode from "jwt-decode";
 
 const SigninForm = () => {
   const navigate = useNavigate();
