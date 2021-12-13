@@ -4,13 +4,24 @@
 
 .divs {
   display: flex;
+
+  height: 15rem;
+  align-items: center;
   justify-content: center;
-  color: rgb(40, 130, 100);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(160, 170, 179, 0.6);
+  color: white;
+  background-color: #145da0;
 }
 
 .titulo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 320px) and (max-width: 767px) {
+}
+@media (min-width: 150px) and (max-width: 319px) {
 }

@@ -4,8 +4,7 @@
 }
 
 .container {
-  background-color: rgb(128, 185, 178);
-  background-image: url("../images/header.png");
+  /* background-image: url("../images/header.png"); */
   z-index: -100;
   background-size: 100%;
   background-position: center;
@@ -17,24 +16,8 @@
   height: 100px;
 }
 .logo {
-  height: 54px;
-  width: 55px;
   border-radius: 10px;
   margin-left: 20px;
-}
-
-.ulestilo {
-  text-decoration: none;
-  list-style: none;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-}
-.ulestilo li {
-  display: inline-block;
-  padding: 5px;
-  color: white;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
@@ -54,6 +37,6 @@
 }
 @media screen and (min-width: 365px) {
   .container {
-    background-size: 100%;
+    background-size: 50%;
   }
 }

@@ -7,7 +7,7 @@
 
 /* divs */
 .upFooter{
-  background-color: rgb(0, 0, 0);
+  background-color:white;
   padding: 0.5rem;
   height: 9rem;
   display: grid;
@@ -16,31 +16,34 @@
 }
 .elements{
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
   gap: 1rem;
   align-items: center;
+  color: white;
+  height: 2rem;
 }
 
 .lowFooter{
-  background-color: rgb(219, 219, 219);
+  background-color: #020d18;
   align-items: center;
 }
 
 .copy{
-  background-color: rgb(0, 0, 0);
+  background-color: white;
   padding: 0.5rem;
-  color: rgba(128, 185, 178);
+  color: #020d18;
   text-align: center;
+  font-weight: bold;
 }
 
 /* componentes */
-h4{
-  color: hsl(192, 68%, 35%);
+.titulo{
+  color: #020d18;
   margin: 0 5% 0 5%;
   font-weight: bold;
 }
 a{
-  color: rgba(128, 185, 178);
+  color: #020d18;
   text-decoration: none;
   margin: 0 5% 0 5%;
 }
@@ -50,10 +53,40 @@ p{
   font-size: small;
   text-align: center;
 }
-.logo{
-  width: 100%;
-  align-items: center;
-}
 
 /* MediaQueries */
+
+@media screen and (min-width: 1025px) {
+.titulo{
+  font-size: 1.5rem;
+  color: #020d18;
+  margin: 0 5% 0 5%;
+  font-weight: bold;
+}
+a{
+  font-size: 1rem;
+  color: #020d18;
+  text-decoration: none;
+  margin: 0 5% 0 5%;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+@media (min-width: 366px) and (max-width: 767px) {
+
+}
+@media (min-width: 160px) and (max-width: 365px) {
+.upFooter{
+  background-color:white;
+  padding: 0.5rem;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+a{
+  font-size: 0.8rem;
+}
+}
+
 

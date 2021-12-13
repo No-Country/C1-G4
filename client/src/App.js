@@ -8,7 +8,7 @@ import Signup from "./pages/Signup.jsx";
 import Admin from "./pages/Admin.jsx";
 //Especialidades
 import Especialidades from "./pages/especialidades/Especialidades.jsx";
-import AgregarEsp from "./pages/especialidades/AgregarEsp.jsx";
+import AgregarEsp from "./pages/especialidades/AgregarEsp";
 import EditarEsp from "./pages/especialidades/EditarEsp.jsx";
 //Medicos
 import Medicos from "./pages/medicos/Medicos.jsx";
@@ -43,8 +43,9 @@ const App = () => {
   return (
     <UsuarioContextProvider>
       <BrowserRouter>
-        <Header />
+        <Header /> 
         <Carousel />
+        <Card />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="signin" element={<Signin />} />
@@ -66,7 +67,6 @@ const App = () => {
           <Route path="cita" element={<Cita />} />
           <Route path="citas" element={<ListarCitas />} />
         </Routes>
-        <Card />
         <Routes></Routes>
         <Footer />
       </BrowserRouter>

@@ -6,9 +6,6 @@
   text-decoration: none;
 }
 .fondo {
-  background-image: url("../images/header.png");
-  min-height: 160px;
-  height: auto;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,13 +30,12 @@
   text-align: center;
 }
 .navul li:hover {
-  background-color: rgb(25, 30, 102);
+  background-color: #145da0;
   transition: 1.2s;
   border-radius: 8px;
 }
 .navul li a {
-  color: rgb(49, 47, 47);
-  font-size: 22px;
+  color: #145da0;
   font-family: "Gill Sans", sans-serif;
   font-weight: bold;
 }
@@ -74,10 +70,9 @@
     padding-right: 3%;
     border-radius: 8px;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.452);
+    background-color: rgb(255, 255, 255);
   }
 }
-
 @media (min-width: 320px) and (max-width: 767px) {
   .fondo {
     background-size: 100%;
@@ -92,9 +87,12 @@
     padding-right: 4%;
     border-radius: 8px;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.452);
+    background-color: #145ca0;
   }
-  .navul a {
+
+  .navul li a {
+    color: white;
+    font-weight: bold;
     font-size: 20px;
   }
   .logo {
@@ -104,9 +102,22 @@
 }
 @media (min-width: 150px) and (max-width: 319px) {
   .navul {
-    position: absolute;
-    width: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.452);
+    width: auto;
+    padding-right: 4%;
+    border-radius: 8px;
+    z-index: 100;
+    background-color: #145ca0;
+  }
+  .navul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
   }
 }
+
