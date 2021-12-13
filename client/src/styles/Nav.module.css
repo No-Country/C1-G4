@@ -13,12 +13,10 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .logo {
   height: 100px;
   width: 100px;
 }
-
 .navul {
   display: flex;
   justify-content: space-around;
@@ -26,7 +24,6 @@
   z-index: 100;
   align-items: center;
 }
-
 .navul li {
   width: auto;
   color: white;
@@ -35,36 +32,30 @@
   align-items: center;
   text-align: center;
 }
-
 .navul li:hover {
   background-color: rgb(25, 30, 102);
   transition: 1.2s;
   border-radius: 8px;
 }
-
 .navul li a {
   color: rgb(49, 47, 47);
   font-size: 22px;
   font-family: "Gill Sans", sans-serif;
   font-weight: bold;
 }
-
 .navul li a:hover {
   color: rgb(234, 236, 240);
 }
-
 @media (min-width: 1024px) {
   .navul {
     text-align: center;
     border-radius: 8px;
-
     margin-left: 45vw;
   }
   .container {
     display: flex;
     align-items: stretch;
   }
-
   .navul li {
     color: white;
   }
@@ -111,7 +102,6 @@
     width: 70px;
   }
 }
-
 @media (min-width: 150px) and (max-width: 319px) {
   .navul {
     position: absolute;
