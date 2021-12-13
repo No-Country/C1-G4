@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000/api/";
+axios.defaults.baseURL = "https://citas-medicas-04.herokuapp.com/api/";
 //https://citas-medicas-04.herokuapp.com/api/
 ReactDOM.render(
   <React.StrictMode>
