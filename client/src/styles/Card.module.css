@@ -7,16 +7,17 @@
 
 /* DIVS */
 .container {
-  background-color: rgb(214, 214, 214);
+  background-color: whitesmoke;
   display: flex;
   align-items: stretch;
   justify-content: center;
+  height: 150%;
 }
 .boton {
+  background-color: #145DA0;
   width: 14rem;
   height: 10rem;
   margin: 1%;
-  border: 0.2rem solid rgb(128, 185, 178);
   border-radius: 5%;
   box-shadow: 1px 1px 1px 1px #1d1e25d0;
   display: flex;
@@ -25,14 +26,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  align-items: center;
 }
 
 .boton:hover {
   background: #343759;
   color: #f1f1f2;
   transition: 0.8s all;
-  transform: scale(1.1);
+  transform: scale(1);
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ a {
 }
 @media (min-width: 366px) and (max-width: 767px) {
   .container {
-    background-color: rgb(214, 214, 214);
+    background-color: white;
     display: grid;
     align-items: stretch;
     justify-content: center;
@@ -61,7 +61,7 @@ a {
     background-size: 150%;
   }
   .container {
-    background-color: rgb(214, 214, 214);
+    background-color: white;
     display: grid;
     align-items: stretch;
     justify-content: center;

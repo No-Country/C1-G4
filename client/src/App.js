@@ -44,7 +44,9 @@ const App = () => {
     <UsuarioContextProvider>
       <BrowserRouter>
         <Header /> 
+        <Home />
         <Carousel />
+        <Card />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="signin" element={<Signin />} />
@@ -65,7 +67,6 @@ const App = () => {
           <Route path="administradores/editar" element={<EditarAdm />} />
           <Route path="cita" element={<Cita />} />
         </Routes>
-        <Card />
         <Routes></Routes>
         <Footer />
       </BrowserRouter>

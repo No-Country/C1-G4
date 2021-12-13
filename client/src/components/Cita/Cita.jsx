@@ -152,14 +152,19 @@ function Cita() {
             </h4>
           </div>
           <div className={styles.formGroup}>
-            <Link to="/signin" className={styles.links}>
-              Iniciar sesion
-            </Link>
+            <button className={styles.btnIni}>
+              <Link to="/signin" className={styles.links}>
+                Iniciar sesion
+              </Link>
+            </button>
           </div>
+          <br />
           <div className={styles.formGroup}>
-            <Link to="/signup" className={styles.links}>
-              Registrarse
-            </Link>
+            <button className={styles.btnIni}>
+              <Link to="/signup" className={styles.links}>
+                Registrarse
+              </Link>
+            </button>
           </div>
         </form>
       )}

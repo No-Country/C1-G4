@@ -10,22 +10,16 @@ function Card() {
         <Link to="/cita" className={styles.btn}>
           <div className={styles.boton}>
             <h4>Pida Una Cita</h4>
-            <img src={logo} alt="" />
-            <p>Ingresa aqui</p>
           </div>
         </Link>
         <Link to="/medicos" className={styles.btn}>
           <div className={styles.boton}>
             <h4>Equipo de Medicos</h4>
-            <img src={logo} alt="" />
-            <p>Ingresa aqui</p>
           </div>
         </Link>
         <Link to="/especialidades" className={styles.btn}>
           <div className={styles.boton}>
             <h4>Especialidades disponibles</h4>
-            <img src={logo} alt="" />
-            <p>Ingresa aqui</p>
           </div>
         </Link>
       </div>

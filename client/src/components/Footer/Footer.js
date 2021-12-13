@@ -8,14 +8,14 @@ function Footer() {
     <footer>
       <div className={styles.upFooter}>
         <div>
-          <h4 className={styles.h4}>Links</h4>
+          <h4 className={styles.titulo}>Links</h4>
             <a href="#">Nosotros<br /></a>
             <a href="#">Preguntas frecuentes<br /></a>
             <a href="#">Terminos legales<br /></a>
             <a href="#">Ayuda<br /></a>
         </div>
         <div>
-          <h4 className={styles.h4}>Legal</h4>
+            <h4 className={styles.titulo}>Legal</h4>
             <a href="#">Politicas de privacidad<br /></a>
             <a href="#">Terminos legales <br /></a>
             <a href="#">Solicitud de baja<br /></a>
@@ -25,12 +25,10 @@ function Footer() {
       <div className={styles.lowFooter}>
         <div className={styles.elements}>
             <p>
-              Avenida Calle 1500 <br />
-              Ciudad de BA, CP 1500
+              Avenida Calle 1500 - Ciudad de BA, CP 1500
             </p>
-            <img className={styles.logo} src={logo} alt="" />
             <p>
-              Contacto <br /> 
+              Contacto: 
               111 222 6789
             </p>
         </div>

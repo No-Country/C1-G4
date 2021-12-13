@@ -10,7 +10,7 @@
   text-align: center;
   flex-direction: column;
   min-height: 30rem;
-  background-color: rgba(180, 220, 200, 0.9);
+  background-color: #020d18;
 }
 .formGrop {
   margin-top: 3rem;
@@ -23,19 +23,18 @@
   align-items: center;
   text-align: center;
 }
-
 .titulo {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
 .links {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  font-size: 2rem;
-  color: rgba(20, 21, 80, 0.9);
-  text-decoration: underline;
+  font-size: 1.5rem;
+  color: #020d18;
+  text-decoration: none;
 }
-
+h4{
+  color: white;
+}
 .select {
   margin-top: 1rem;
   width: 18rem;
@@ -46,6 +45,17 @@
   align-self: center;
   width: 12rem;
   height: 2.4rem;
+}
+
+.btnIni{
+  width: 25%;
+  border-radius: 2%;
+  background-color: #145DA0;
+}
+.btnIni:hover{
+  background-color: #f7f5f5;
+  color : #292828b7;
+  transition: 0.6s;                    
 }
 
 button {
@@ -67,3 +77,29 @@ option {
   justify-content: center;
   text-align: center;
 }
+
+
+@media screen and (min-width: 1025px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btnIni{
+  width: 60%;
+  border-radius: 2%;
+  background-color: #145DA0;
+}
+}
+@media (min-width: 366px) and (max-width: 767px) {
+.btnIni{
+  width: 60%;
+  border-radius: 2%;
+  background-color: #145DA0;
+}
+}
+@media (min-width: 160px) and (max-width: 365px) {
+.btnIni{
+  width: 60%;
+  border-radius: 2%;
+  background-color: #145DA0;
+}
+}
+
