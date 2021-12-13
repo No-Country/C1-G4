@@ -8,11 +8,11 @@ const Admin = () => {
   const navigate = useNavigate();
   const { isLogged, isAdmin } = useUser();
 
-  useEffect(()=>{
-    if (!isLogged() || !isAdmin()){
+  useEffect(() => {
+    if (!isLogged() || !isAdmin()) {
       navigate("/");
     }
-  },[isLogged, isAdmin, navigate]);
+  }, [isLogged, isAdmin, navigate]);
 
   return (
     <div className={styles.contenedorAdmin}>
@@ -29,7 +29,10 @@ const Admin = () => {
           </Link>
           <Link to="/usuarios" className={styles.listElement}>
             Usuarios
-          </Link> 
+          </Link>
+          <Link to="/citas" className={styles.listElement}>
+            Citas
+          </Link>
         </ul>
       </div>
     </div>

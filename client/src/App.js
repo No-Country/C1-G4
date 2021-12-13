@@ -23,6 +23,8 @@ import CambiarPass from "./pages/usuarios/CambiarPass.jsx";
 import Administradores from "./pages/administradores/Administradores.jsx";
 import AgregarAdm from "./pages/administradores/AgregarAdm.jsx";
 import EditarAdm from "./pages/administradores/EditarAdm.jsx";
+//Citas
+import ListarCitas from "./pages/citas/ListarCitas.jsx";
 
 //import userActions from "./redux/actions/userActions";
 import Header from "./components/Header/Header";
@@ -36,14 +38,12 @@ import { UsuarioContextProvider } from "./context/userContext";
 //hooks
 
 const App = () => {
-
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <UsuarioContextProvider>
       <BrowserRouter>
-        <Header /> 
+        <Header />
         <Carousel />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -64,6 +64,7 @@ const App = () => {
           <Route path="administradores/agregar" element={<AgregarAdm />} />
           <Route path="administradores/editar" element={<EditarAdm />} />
           <Route path="cita" element={<Cita />} />
+          <Route path="citas" element={<ListarCitas />} />
         </Routes>
         <Card />
         <Routes></Routes>

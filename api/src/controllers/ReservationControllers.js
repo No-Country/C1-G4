@@ -19,7 +19,7 @@ export default {
   // obtener todas la reservaciones creadas
   getlistReservation: async (req, res, next) => {
     try {
-      const reservation = await models.Reservation.find();
+      const reservation = await models.Reservation.find().populate("medic").populate("user", {password: 0});
       res.status(200).json(reservation);
     } catch (e) {
       

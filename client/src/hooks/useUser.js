@@ -30,12 +30,16 @@ export default function useUser() {
   }, [setJwt, jwt]);
 
   const isAdmin = useCallback(() => {
-    if (jwt.rol === "admin") {
-      return true;
-    } else {
-      return false;
+    let token = localStorage.getItem("jwt");
+    if (token) {
+      token = decode(token);
+      if (token.rol === "admin") {
+        return true;
+      } else {
+        return false;
+      }
     }
-  }, [jwt]);
+  }, []);
 
   const isLogged = useCallback(() => {
     if (jwt) {
@@ -45,7 +49,7 @@ export default function useUser() {
     }
   }, [jwt]);
 
-  const showUser = useCallback(()=>{
+  const showUser = useCallback(() => {
     return jwt.name;
   }, [jwt]);
 
@@ -55,6 +59,6 @@ export default function useUser() {
     isLogged,
     isAdmin,
     autoLogin,
-    showUser
+    showUser,
   };
 }
