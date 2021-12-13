@@ -6,7 +6,6 @@
   text-decoration: none;
 }
 .fondo {
-
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,7 +56,18 @@
     font-size: 1rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 991px) and (max-width: 1023px) {
+  .container{
+    height: 100px;
+  }
+  .navul {
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
   .navul {
     display: flex;
     justify-content: center;
@@ -68,7 +78,6 @@
     padding-right: 3%;
     border-radius: 8px;
     z-index: 100;
-    background-color: rgb(255, 255, 255);
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {

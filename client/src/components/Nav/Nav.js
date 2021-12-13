@@ -17,9 +17,6 @@ function Nav() {
   return (
     <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
       <div className={"container-fluid " + styles.container}>
-        <a className="navbar-brand" href="# ">
-          <img className={styles.logo} alt="" src={logo} />
-        </a>
         <button
           className="navbar-toggler"
           type="button"
