@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
-      <div className={"container-fluid " + styles.container}>
+    <nav className={"navbar-light navbar navbar-expand-lg " + styles.fondo}>
+      <div className="container-fluid ">
         <a className="navbar-brand" href="# ">
-          <img className={styles.logo} alt="" src={logo} />
+          <img className={estilo.logo} alt="" src={logo} />
         </a>
         <button
           className="navbar-toggler"
@@ -23,21 +23,21 @@ function Nav() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className={styles.navul}>
+          <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="# ">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/signin">
-                Iniciar sesion
-              </Link>
+              <a className="nav-link active" href="# ">
+                Features
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/signup">
-                Resgistrarse
-              </Link>
+              <a className="nav-link active" href="# ">
+                Pricing
+              </a>
             </li>
             <li className="nav-item">
               <a
@@ -46,7 +46,7 @@ function Nav() {
                 tabindex="-1"
                 aria-disabled="true"
               >
-                Mas info
+                Disabled
               </a>
             </li>
           </ul>
