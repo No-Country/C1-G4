@@ -5,14 +5,18 @@
   list-style: none;
   text-decoration: none;
 }
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+}
 .fondo {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 .logo {
-  height: 100px;
-  width: 100px;
+  width: 5%;
+
 }
 .navul {
   width: 100%;
@@ -34,7 +38,6 @@
 .navul li a {
   color: #145DA0;
   font-family: "Gill Sans", sans-serif;
-
 }
 .navul li a:hover {
   color: rgb(234, 236, 240);

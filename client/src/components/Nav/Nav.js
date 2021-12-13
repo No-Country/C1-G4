@@ -1,5 +1,5 @@
 import styles from "../../styles/Nav.module.css";
-import logo from "../../images/medic.svg";
+import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import useUser from "./../../hooks/useUser";
@@ -17,6 +17,7 @@ function Nav() {
   return (
     <nav className={" navbar navbar-expand-lg navbar-light  " + styles.fondo}>
       <div className={"container-fluid " + styles.container}>
+      <img className={styles.logo}src={logo} />
         <button
           className="navbar-toggler"
           type="button"
