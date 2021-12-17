@@ -126,7 +126,7 @@ function Cita() {
             >
               <option value="">----- Seleccione la especialidad -----</option>
               {medicos.map((medico) => {
-                if (especialidadName === medico.speciality.name) {
+                if (especialidadName === medico.speciality) {
                   return (
                     <option key={medico._id} value={medico._id}>
                       {medico.name + " " + medico.lastname}

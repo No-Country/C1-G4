@@ -25,7 +25,7 @@ const Medicos = () => {
       .get("medic/list")
       .then((res) => {
         const { data } = res;
-        saveMedicos(data);
+        // saveMedicos(data);
       })
       .catch(console.log);
   };
